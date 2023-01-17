@@ -1,3 +1,6 @@
 [[plugins]]
 repo = 'ojroques/vim-oscyank'
 hook_add = 'source ~/.local/share/dein/plugins/vim-oscyank'
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
