@@ -16,6 +16,9 @@ let s:dein_base = '/root/.local/share/dein'
 " Set Dein source path (required)
 let s:dein_src = '/root/.local/share/dein/repos/github.com/Shougo/dein.vim'
 
+" Set Dein toml path (option)
+let s:dein_toml = '/root/.local/share/dein/toml/dein.toml'
+
 " Set Dein runtime path (required)
 execute 'set runtimepath+=' . s:dein_src
 
@@ -25,8 +28,7 @@ if dein#load_state(s:dein_base)
   call dein#add(s:dein_src)
 
   " Your plugins go here:
-  "call dein#add('Shougo/neosnippet.vim')
-  "call dein#add('Shougo/neosnippet-snippets')
+  call dein#load_toml(s:dein_toml)
 
   " Finish Dein initialization (required)
   call dein#end()

@@ -1,0 +1,1 @@
+vnoremap y :OSCYank<CR>
