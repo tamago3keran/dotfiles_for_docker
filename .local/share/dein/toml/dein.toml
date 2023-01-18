@@ -19,4 +19,8 @@ repo = 'Shougo/ddc-source-around'
 repo = 'Shougo/ddc-ui-native'
 
 [[plugins]]
+repo = 'Shougo/pum.vim'
+hook_add = 'source ~/.local/share/dein/plugins/pum-vim'
+
+[[plugins]]
 repo = 'vim-denops/denops.vim'
