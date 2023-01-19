@@ -23,7 +23,16 @@ repo = 'Shougo/ddu.vim'
 hook_add = 'source ~/.local/share/dein/plugins/ddu-vim'
 
 [[plugins]]
+repo = 'Shougo/ddu-column-filename'
+
+[[plugins]]
 repo = 'Shougo/ddu-ui-ff'
+
+[[plugins]]
+repo = 'Shougo/ddu-ui-filer'
+
+[[plugins]]
+repo = 'Shougo/ddu-source-file'
 
 [[plugins]]
 repo = 'Shougo/ddu-source-file_rec'

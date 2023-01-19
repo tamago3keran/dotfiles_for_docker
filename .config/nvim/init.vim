@@ -9,6 +9,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set splitright
+set modifiable
 
 " Set Dein base path (required)
 let s:dein_base = '/root/.local/share/dein'
