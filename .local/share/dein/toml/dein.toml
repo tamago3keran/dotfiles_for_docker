@@ -29,6 +29,9 @@ repo = 'Shougo/ddu-ui-ff'
 repo = 'Shougo/ddu-source-file_rec'
 
 [[plugins]]
+repo = 'Shougo/ddu-filter-converter_display_word'
+
+[[plugins]]
 repo = 'Shougo/ddu-filter-matcher_substring'
 
 [[plugins]]
@@ -37,6 +40,9 @@ repo = 'Shougo/ddu-kind-file'
 [[plugins]]
 repo = 'Shougo/pum.vim'
 hook_add = 'source ~/.local/share/dein/plugins/pum-vim'
+
+[[plugins]]
+repo = 'shun/ddu-source-rg'
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
