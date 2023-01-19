@@ -19,6 +19,22 @@ repo = 'Shougo/ddc-source-around'
 repo = 'Shougo/ddc-ui-native'
 
 [[plugins]]
+repo = 'Shougo/ddu.vim'
+hook_add = 'source ~/.local/share/dein/plugins/ddu-vim'
+
+[[plugins]]
+repo = 'Shougo/ddu-ui-ff'
+
+[[plugins]]
+repo = 'Shougo/ddu-source-file_rec'
+
+[[plugins]]
+repo = 'Shougo/ddu-filter-matcher_substring'
+
+[[plugins]]
+repo = 'Shougo/ddu-kind-file'
+
+[[plugins]]
 repo = 'Shougo/pum.vim'
 hook_add = 'source ~/.local/share/dein/plugins/pum-vim'
 
