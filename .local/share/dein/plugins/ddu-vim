@@ -97,3 +97,9 @@ function! s:ddu_filter_my_settings() abort
   inoremap <buffer><silent> <CR> <Esc><Cmd>close<CR>
   inoremap <buffer><silent> <Esc> <Esc><Cmd>close<CR>
 endfunction
+
+augroup transparent-windows
+  autocmd!
+  autocmd FileType ddu-ff set winblend=15
+  autocmd FileType ddu-ff-filter set winblend=15
+augroup END
