@@ -17,7 +17,8 @@ let s:dein_base = '/root/.local/share/dein'
 let s:dein_src = '/root/.local/share/dein/repos/github.com/Shougo/dein.vim'
 
 " Set Dein toml path (option)
-let s:dein_toml = '/root/.local/share/dein/toml/dein.toml'
+let s:dark_powered_toml = '/root/.local/share/dein/toml/dark_powered.toml'
+let s:general_toml = '/root/.local/share/dein/toml/general.toml'
 
 " Set Dein runtime path (required)
 execute 'set runtimepath+=' . s:dein_src
@@ -28,7 +29,8 @@ if dein#load_state(s:dein_base)
   call dein#add(s:dein_src)
 
   " Your plugins go here:
-  call dein#load_toml(s:dein_toml)
+  call dein#load_toml(s:dark_powered_toml)
+  call dein#load_toml(s:general_toml)
 
   " Finish Dein initialization (required)
   call dein#end()
