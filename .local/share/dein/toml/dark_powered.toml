@@ -25,6 +25,9 @@ hook_add = 'source ~/.local/share/dein/plugins/ddu.vim'
 repo = 'Shougo/ddu-column-filename'
 
 [[plugins]]
+repo = 'Shougo/ddu-filter-sorter_alpha'
+
+[[plugins]]
 repo = 'Shougo/ddu-ui-ff'
 
 [[plugins]]

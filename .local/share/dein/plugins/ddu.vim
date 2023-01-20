@@ -6,6 +6,11 @@ call ddu#custom#patch_global(#{
     \       prompt: '> ',
     \     }
     \   },
+    \   sourceOptions: #{
+    \     _: #{
+    \       sorters: ['sorter_alpha'],
+    \     },
+    \   },
     \   filterParams: #{
     \     matcher_substring: #{
     \       highlightMatched: 'Title',
