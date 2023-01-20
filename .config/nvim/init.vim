@@ -9,9 +9,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set splitright
-set termguicolors
-hi FloatBorder guibg=#3b4252 guifg=#5e81ac
-hi NormalFloat guibg=#3b4252
 
 " Set Dein base path (required)
 let s:dein_base = '/root/.local/share/dein'
