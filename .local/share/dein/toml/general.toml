@@ -1,14 +1,14 @@
 [[plugins]]
 repo = 'EdenEast/nightfox.nvim'
-hook_add = 'source ~/.local/share/dein/plugins/nightfox-nvim'
+hook_add = 'source ~/.local/share/dein/plugins/nightfox.vim'
 
 [[plugins]]
 repo = 'lewis6991/gitsigns.nvim'
-hook_add = 'source ~/.local/share/dein/plugins/gitsigns-nvim.lua'
+hook_add = 'source ~/.local/share/dein/plugins/gitsigns.lua'
 
 [[plugins]]
 repo = 'ojroques/vim-oscyank'
-hook_add = 'source ~/.local/share/dein/plugins/vim-oscyank'
+hook_add = 'source ~/.local/share/dein/plugins/oscyank.vim'
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'

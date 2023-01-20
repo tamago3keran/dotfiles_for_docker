@@ -1,6 +1,6 @@
 [[plugins]]
 repo = 'Shougo/ddc.vim'
-hook_add = 'source ~/.local/share/dein/plugins/ddc-vim'
+hook_add = 'source ~/.local/share/dein/plugins/ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-matcher_head'
@@ -16,7 +16,7 @@ repo = 'Shougo/ddc-ui-native'
 
 [[plugins]]
 repo = 'Shougo/ddu.vim'
-hook_add = 'source ~/.local/share/dein/plugins/ddu-vim'
+hook_add = 'source ~/.local/share/dein/plugins/ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-column-filename'
@@ -44,7 +44,7 @@ repo = 'Shougo/ddu-kind-file'
 
 [[plugins]]
 repo = 'Shougo/pum.vim'
-hook_add = 'source ~/.local/share/dein/plugins/pum-vim'
+hook_add = 'source ~/.local/share/dein/plugins/pum.vim'
 
 [[plugins]]
 repo = 'shun/ddu-source-rg'
