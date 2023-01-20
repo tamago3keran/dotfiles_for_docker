@@ -22,6 +22,7 @@ require('gitsigns').setup {
     end, {expr=true})
 
     -- Actions
+    map('n', '<C-g>u', gs.reset_hunk)
     map('n', '<C-g>b', function() gs.blame_line{full=true} end)
     map('n', '<C-g>d', gs.preview_hunk)
   end
