@@ -3,6 +3,10 @@ repo = 'EdenEast/nightfox.nvim'
 hook_add = 'source ~/.local/share/dein/plugins/nightfox-nvim'
 
 [[plugins]]
+repo = 'lewis6991/gitsigns.nvim'
+hook_add = 'source ~/.local/share/dein/plugins/gitsigns-nvim.lua'
+
+[[plugins]]
 repo = 'ojroques/vim-oscyank'
 hook_add = 'source ~/.local/share/dein/plugins/vim-oscyank'
 
