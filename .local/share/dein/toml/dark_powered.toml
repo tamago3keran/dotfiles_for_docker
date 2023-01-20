@@ -1,4 +1,7 @@
 [[plugins]]
+repo = 'ryota2357/ddu-column-icon_filename'
+
+[[plugins]]
 repo = 'Shougo/ddc.vim'
 hook_add = 'source ~/.local/share/dein/plugins/ddc.vim'
 

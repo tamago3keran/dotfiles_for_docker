@@ -22,7 +22,7 @@ call ddu#custom#patch_local('filer', #{
     \   ui: 'filer',
     \   sourceOptions: #{
     \     _: #{
-    \       columns: ['filename'],
+    \       columns: ['icon_filename'],
     \     },
     \   },
     \ })
