@@ -1,54 +1,54 @@
-call ddu#custom#patch_global({
-    \   'ui': 'ff',
-    \   'uiParams': {
-    \     'ff': {
-    \       'split': 'floating',
-    \       'prompt': '> ',
+call ddu#custom#patch_global(#{
+    \   ui: 'ff',
+    \   uiParams: #{
+    \     ff: #{
+    \       split: 'floating',
+    \       prompt: '> ',
     \     }
     \   },
-    \   'filterParams': {
-    \     'matcher_substring': {
-    \       'highlightMatched': 'Title',
+    \   filterParams: #{
+    \     matcher_substring: #{
+    \       highlightMatched: 'Title',
     \     },
     \   },
-    \   'kindOptions': {
-    \     'file': {
-    \       'defaultAction': 'open',
+    \   kindOptions: #{
+    \     file: #{
+    \       defaultAction: 'open',
     \     },
     \   }
     \ })
 
-call ddu#custom#patch_local('filer', {
-    \   'ui': 'filer',
-    \   'sourceOptions': {
-    \     '_': {
-    \       'columns': ['filename'],
+call ddu#custom#patch_local('filer', #{
+    \   ui: 'filer',
+    \   sourceOptions: #{
+    \     _: #{
+    \       columns: ['filename'],
     \     },
     \   },
     \ })
 
-call ddu#custom#patch_local('file_rec', {
-    \   'sourceOptions': {
-    \     'file_rec': {
-    \       'matchers': ['matcher_substring'],
+call ddu#custom#patch_local('file_rec', #{
+    \   sourceOptions: #{
+    \     file_rec: #{
+    \       matchers: ['matcher_substring'],
     \     },
     \   },
-    \   'uiParams': {
-    \     'ff': {
-    \       'startFilter': v:true,
+    \   uiParams: #{
+    \     ff: #{
+    \       startFilter: v:true,
     \     }
     \   }
     \ })
 
-call ddu#custom#patch_local('grep', {
-    \   'sourceOptions': {
-    \     'rg': {
-    \       'matchers': ['converter_display_word', 'matcher_substring'],
+call ddu#custom#patch_local('grep', #{
+    \   sourceOptions: #{
+    \     rg: #{
+    \       matchers: ['converter_display_word', 'matcher_substring'],
     \     },
     \   },
-    \   'sourceParams': {
-    \     'rg': {
-    \       'args': ['--hidden', '--column'],
+    \   sourceParams: #{
+    \     rg: #{
+    \       args: ['--hidden', '--column'],
     \     },
     \   },
     \ })
