@@ -69,6 +69,7 @@ local function generate_pallet_from_colorscheme()
     white   = { index = 7, default = "#dfdfe0" },
   }
 
+
   local diagnostic_map = {
     hint = { hl = "DiagnosticHint", default = color_map.green.default },
     info = { hl = "DiagnosticInfo", default = color_map.blue.default },
@@ -154,11 +155,6 @@ vim.api.nvim_create_autocmd({ "SessionLoadPost", "ColorScheme" }, {
 ----------------------------------------------------------------------------------------------------
 -- Feline
 
-local components = {
-  active = {},
-  inactive = {}
-}
-
 local vi = {
   bg_colors = {
     ['NORMAL'] = 'UserRvCyan',
@@ -182,6 +178,13 @@ local vi = {
     ['SELECT'] = 'UserMagenta',
     ['COMMAND'] = 'UserYellow',
     ['TERMINAL'] = 'UserBlue',
+  },
+
+  icons = {
+    dos = "",
+    unix = "",
+    mac = "",
+    vertical_bar_thin = "│",
   }
 }
 
@@ -193,40 +196,110 @@ local function vi_fg_hl()
   return vi.fg_colors[vi_mode_utils.get_vim_mode()] or "UserSLBlack"
 end
 
-components.active[1] = {
-  {
+local components = {
+  left_block = {
     provider = '▊ ',
     hl = vi_fg_hl,
   },
-  {
+  vim_icon = {
     provider = 'vi_mode',
     hl = vi_fg_hl,
   },
-  {
+  vimode = {
     provider = function() return fmt(" %s ", vi_mode_utils.get_vim_mode()) end,
     hl = vi_fg_hl,
   },
-  {
+  git_branch = {
     provider = "git_branch",
     hl = "UserSLGitBranch",
     left_sep = { str = " ", hl = "UserSLGitBranch" },
     right_sep = { str = " ", hl = "UserSLGitBranch" },
     enabled = function() return vim.b.gitsigns_status_dict ~= nil end,
   },
-  {
-    provider = { name = "file_info", opts = { type = "relative" } },
-    hl = "UserSLAlt",
-    left_sep = { str = " ", hl = "UserSLAlt" },
-    right_sep = { str = " ", hl = "UserSLAlt" },
+  git_diff_added = {
+    provider = "git_diff_added",
+    hl = "UserGreen",
+    right_sep = { str = " ", hl = "StatusLine" },
   },
-  {
+  git_diff_removed = {
+    provider = "git_diff_removed",
+    hl = "UserRed",
+    right_sep = { str = " ", hl = "StatusLine" },
+  },
+  git_diff_changed = {
+    provider = "git_diff_changed",
+    hl = "UserYellow",
+  },
+  file_info = {
+    provider = "file_info",
+    hl = "StatusLine",
+    left_sep = { str = " ", hl = "StatusLine" },
+    right_sep = { str = " ", hl = "StatusLine" },
+  },
+  file_type = {
+    provider = function() return fmt(" %s ", vim.bo.filetype:upper()) end,
+    hl = "UserSLAlt",
+  },
+  file_enc = {
+    provider = function()
+      local os = vi.icons[vim.bo.fileformat] or ""
+      return fmt(" %s %s ", os, vim.bo.fileencoding)
+    end,
+    hl = "StatusLine",
+  },
+  cur_position = {
+    provider = function() return fmt("  %3d:%-2d ", unpack(vim.api.nvim_win_get_cursor(0))) end,
+    hl = vi_bg_hl,
+  },
+  cur_percent = {
+    provider = function() return " " .. require("feline.providers.cursor").line_percentage() .. "  " end,
+    hl = vi_bg_hl,
+    left_sep = { str = vi.icons.vertical_bar_thin, hl = vi_bg_hl },
+  },
+  in_file_info = {
+    provider = "file_info",
+    hl = "StatusLine",
+  },
+  in_position = {
+    provider = "position",
+    hl = vi_bg_hl,
+  },
+  default = {
     provider = "",
     hl = "StatusLine",
   },
 }
 
+local active = {
+  { -- left
+    components.left_block,
+    components.vim_icon,
+    components.vimode,
+    components.git_branch,
+    components.git_diff_added,
+    components.git_diff_removed,
+    components.git_diff_changed,
+  },
+  { -- middle
+    components.file_info,
+  },
+  { -- right
+    components.file_type,
+    components.file_enc,
+    components.cur_position,
+    components.cur_percent,
+  },
+}
+
+local inactive = {
+  { components.default }, -- left
+  { components.in_file_info }, -- middle
+  { components.default }, -- right
+}
+
 require('feline').setup {
   components = {
-    active = components.active,
+    active = active,
+    inactive = inactive,
   }
 }
