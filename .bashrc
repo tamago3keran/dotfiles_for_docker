@@ -77,6 +77,19 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# Scripts definitions when boot terminal
+# You may want to run the script when boot terminal,
+# put all your scripts into a separate file like ~/.bash_boot_scripts,
+# instead of adding them here directly.
+
+if [ -d ~/.bash_boot_scripts ]; then
+    for filename in `ls -a ~/.bash_boot_scripts`; do
+        if [ $filename != "." ] && [ $filename != ".." ]; then
+            sh ~/.bash_boot_scripts/$filename
+        fi
+    done
+fi
+
 # Alias definitions.
 # You may want to put all your additional aliases into a separate file
 # like ~/.bash_aliases, instead of adding them here directly.
