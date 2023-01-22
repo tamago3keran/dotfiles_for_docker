@@ -11,6 +11,10 @@ repo = 'lewis6991/gitsigns.nvim'
 hook_add = 'source ~/.local/share/dein/plugins/gitsigns.lua'
 
 [[plugins]]
+repo = 'nanozuki/tabby.nvim'
+hook_add = 'source ~/.local/share/dein/plugins/tabby.lua'
+
+[[plugins]]
 repo = 'nvim-tree/nvim-web-devicons'
 
 [[plugins]]
