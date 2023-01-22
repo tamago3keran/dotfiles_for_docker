@@ -160,8 +160,8 @@ local vi = {
     ['NORMAL'] = 'UserRvCyan',
     ['INSERT'] = 'UserSLStatus',
     ['VISUAL'] = 'UserRvMagenta',
-    ['V-LINE'] = 'UserRvMagenta',
-    ['V-BLOCK'] = 'UserRvMagenta',
+    ['LINES'] = 'UserRvMagenta',
+    ['BLOCK'] = 'UserRvMagenta',
     ['REPLACE'] = 'UserRvRed',
     ['SELECT'] = 'UserRvMagenta',
     ['COMMAND'] = 'UserRvYellow',
@@ -172,8 +172,8 @@ local vi = {
     ['NORMAL'] = 'UserCyan',
     ['INSERT'] = 'UserSLStatusBg',
     ['VISUAL'] = 'UserMagenta',
-    ['V-LINE'] = 'UserMagenta',
-    ['V-BLOCK'] = 'UserMagenta',
+    ['LINES'] = 'UserMagenta',
+    ['BLOCK'] = 'UserMagenta',
     ['REPLACE'] = 'UserRed',
     ['SELECT'] = 'UserMagenta',
     ['COMMAND'] = 'UserYellow',
@@ -189,11 +189,11 @@ local vi = {
 }
 
 local function vi_bg_hl()
-  return vi.bg_colors[vi_mode_utils.get_vim_mode()] or "UserSLViBlack"
+  return vi.bg_colors[vi_mode_utils.get_vim_mode()] or "UserRvBlack"
 end
 
 local function vi_fg_hl()
-  return vi.fg_colors[vi_mode_utils.get_vim_mode()] or "UserSLBlack"
+  return vi.fg_colors[vi_mode_utils.get_vim_mode()] or "UserBlack"
 end
 
 local components = {
