@@ -42,7 +42,7 @@ db.default_banner = {
   [[ ⠈⠉     ⠈⠉     ⠙⠛⠛⠉     ⠈⠙⠛⠛⠉        ⠛⠛⠛⠛⠛      ⠉⠉⠉  ⠉⠉⠉⠁    ⠈⠉⠉⠉    ⠉⠉⠉⠁ ]],
 }
 
-db.custom_center = { { icon = '', desc = '>  NVIM v0.8.2  ', action = '' } }
+db.custom_center = { { icon = '', desc = 'NVIM v0.8.2', action = '' } }
 db.custom_footer = {
   'Nvim is open source and freely distributable',
   'https://neovim.io#chat'
