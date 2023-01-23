@@ -135,7 +135,7 @@ vim.api.nvim_create_autocmd({ "SessionLoadPost", "ColorScheme" }, {
 local filename = require("tabby.filename")
 
 local cwd = function()
-  return " 󰝆 " .. vim.fn.fnamemodify(vim.fn.getcwd(), ":t") .. " "
+  return " 󰚌 " .. vim.fn.fnamemodify(vim.fn.getcwd(), ":t") .. " "
 end
 
 local line = {
