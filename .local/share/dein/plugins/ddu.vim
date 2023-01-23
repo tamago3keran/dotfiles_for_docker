@@ -71,10 +71,13 @@ function! s:ddu_filer_my_settings() abort
     \ ddu#ui#filer#is_tree() ?
     \ "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'narrow'})<CR>" :
     \ "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'open'})<CR>"
+  nnoremap <buffer><silent><expr> o
+    \ ddu#ui#filer#is_tree() ?
+    \ "<Cmd>call ddu#ui#filer#do_action('expandItem', {'mode': 'toggle'})<CR>" :
+    \ "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'open'})<CR>"
   nnoremap <buffer><silent> s <Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'open', 'params': {'command': 'vsplit'}})<CR>
   nnoremap <buffer><silent> t <Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'open', 'params': {'command': 'tabnew'}})<CR>
   nnoremap <buffer><silent> <Space> <Cmd>call ddu#ui#filer#do_action('toggleSelectItem')<CR>
-  nnoremap <buffer><silent> o <Cmd>call ddu#ui#filer#do_action('expandItem', {'mode': 'toggle'})<CR>
   nnoremap <buffer><silent> <Esc> <Cmd>call ddu#ui#filer#do_action('quit')<CR>
   nnoremap <buffer><silent> .. <Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'narrow', 'params': {'path': '..'}})<CR>
   nnoremap <buffer><silent> c <Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'copy'})<CR>
