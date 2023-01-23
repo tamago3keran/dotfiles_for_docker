@@ -7,10 +7,6 @@ repo = 'feline-nvim/feline.nvim'
 hook_add = 'source ~/.local/share/dein/plugins/feline.lua'
 
 [[plugins]]
-repo = 'glepnir/dashboard-nvim'
-hook_add = 'source ~/.local/share/dein/plugins/dashboard.lua'
-
-[[plugins]]
 repo = 'lewis6991/gitsigns.nvim'
 hook_add = 'source ~/.local/share/dein/plugins/gitsigns.lua'
 
