@@ -15,6 +15,9 @@ repo = 'Shougo/ddc-sorter_rank'
 repo = 'Shougo/ddc-source-around'
 
 [[plugins]]
+repo = 'Shougo/ddc-source-nvim-lsp'
+
+[[plugins]]
 repo = 'Shougo/ddc-ui-native'
 
 [[plugins]]

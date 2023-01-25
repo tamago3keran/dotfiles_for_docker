@@ -11,12 +11,19 @@ repo = 'lewis6991/gitsigns.nvim'
 hook_add = 'source ~/.local/share/dein/plugins/gitsigns.lua'
 
 [[plugins]]
+repo = 'matsui54/denops-popup-preview.vim'
+
+[[plugins]]
 repo = 'mhinz/vim-startify'
 hook_add = 'source ~/.local/share/dein/plugins/startify.vim'
 
 [[plugins]]
 repo = 'nanozuki/tabby.nvim'
 hook_add = 'source ~/.local/share/dein/plugins/tabby.lua'
+
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'
+hook_add = 'source ~/.local/share/dein/plugins/lspconfig.lua'
 
 [[plugins]]
 repo = 'nvim-tree/nvim-web-devicons'
