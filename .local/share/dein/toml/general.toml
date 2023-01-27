@@ -34,3 +34,7 @@ hook_add = 'source ~/.local/share/dein/plugins/oscyank.vim'
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'windwp/nvim-autopairs'
+hook_add = 'source ~/.local/share/dein/plugins/autopairs.lua'
