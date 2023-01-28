@@ -23,11 +23,32 @@ call ddu#custom#patch_global(#{
     \   }
     \ })
 
+call ddu#custom#patch_local('buffer', #{
+    \   sourceOptions: #{
+    \     buffer: #{
+    \       matchers: ['matcher_substring'],
+    \     },
+    \   },
+    \ })
+
 call ddu#custom#patch_local('filer', #{
     \   ui: 'filer',
     \   sourceOptions: #{
     \     _: #{
     \       columns: ['icon_filename'],
+    \     },
+    \   },
+    \ })
+
+call ddu#custom#patch_local('grep', #{
+    \   sourceOptions: #{
+    \     rg: #{
+    \       matchers: ['converter_display_word', 'matcher_substring'],
+    \     },
+    \   },
+    \   sourceParams: #{
+    \     rg: #{
+    \       args: ['--hidden', '--column'],
     \     },
     \   },
     \ })
@@ -45,21 +66,9 @@ call ddu#custom#patch_local('file_rec', #{
     \   }
     \ })
 
-call ddu#custom#patch_local('grep', #{
-    \   sourceOptions: #{
-    \     rg: #{
-    \       matchers: ['converter_display_word', 'matcher_substring'],
-    \     },
-    \   },
-    \   sourceParams: #{
-    \     rg: #{
-    \       args: ['--hidden', '--column'],
-    \     },
-    \   },
-    \ })
-
 nnoremap [ddu] <Nop>
 nmap <C-d> [ddu]
+nnoremap <silent> [ddu]b <Cmd>call ddu#start({'name': 'buffer', 'sources': [{'name': 'buffer'}]})<CR>
 nnoremap <silent> [ddu]f <Cmd>call ddu#start({'name': 'filer', 'sources': [{'name': 'file', 'params': {}}]})<CR>
 nnoremap <silent> [ddu]g <Cmd>call ddu#start({'name': 'grep', 'sources': [{'name': 'rg', 'params': {'input': input('Pattern: ')}}]})<CR>
 nnoremap <silent> [ddu]p <Cmd>call ddu#start({'name': 'file_rec', 'sources': [{'name': 'file_rec'}]})<CR>
