@@ -29,10 +29,6 @@ on_event = 'InsertEnter'
 depends = ['denops.vim']
 
 [[plugins]]
-repo = 'Shougo/ddu-column-filename'
-on_source = ['ddu.vim']
-
-[[plugins]]
 repo = 'Shougo/ddu-filter-sorter_alpha'
 on_source = ['ddu.vim']
 
