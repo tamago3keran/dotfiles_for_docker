@@ -1,10 +1,11 @@
 [[plugins]]
 repo = 'matsui54/denops-popup-preview.vim'
+hook_source = 'source ~/.local/share/dein/plugins/denops-popup-preview.vim'
 on_source = ['ddc.vim']
 
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
-hook_add = 'source ~/.local/share/dein/plugins/lspconfig.lua'
+hook_source = 'source ~/.local/share/dein/plugins/lspconfig.lua'
 on_source = ['ddc.vim']
 
 [[plugins]]
@@ -13,7 +14,7 @@ on_source = ['feline.nvim']
 
 [[plugins]]
 repo = 'Shougo/pum.vim'
-hook_add = 'source ~/.local/share/dein/plugins/pum.vim'
+hook_source = 'source ~/.local/share/dein/plugins/pum.vim'
 on_source = ['ddc.vim']
 
 [[plugins]]
@@ -22,5 +23,5 @@ on_event = 'InsertEnter'
 
 [[plugins]]
 repo = 'windwp/nvim-autopairs'
-hook_add = 'source ~/.local/share/dein/plugins/autopairs.lua'
+hook_source = 'source ~/.local/share/dein/plugins/autopairs.lua'
 on_event = 'InsertEnter'
