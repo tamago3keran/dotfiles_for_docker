@@ -18,10 +18,6 @@ hook_source = 'source ~/.local/share/dein/plugins/pum.vim'
 on_source = ['ddc.vim']
 
 [[plugins]]
-repo = 'tpope/vim-endwise'
-on_event = 'InsertEnter'
-
-[[plugins]]
 repo = 'windwp/nvim-autopairs'
 hook_source = 'source ~/.local/share/dein/plugins/autopairs.lua'
 on_event = 'InsertEnter'

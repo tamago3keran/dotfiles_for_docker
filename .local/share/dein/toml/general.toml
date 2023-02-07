@@ -24,4 +24,7 @@ repo = 'ojroques/nvim-osc52'
 hook_add = 'source ~/.local/share/dein/plugins/osc52.lua'
 
 [[plugins]]
+repo = 'tpope/vim-endwise'
+
+[[plugins]]
 repo = 'vim-denops/denops.vim'
