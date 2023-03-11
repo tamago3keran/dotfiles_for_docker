@@ -9,6 +9,7 @@ depends = ['nvim-web-devicons']
 
 [[plugins]]
 repo = 'github/copilot.vim'
+hook_add = 'source ~/.local/share/dein/plugins/copilot.vim'
 
 [[plugins]]
 repo = 'lewis6991/gitsigns.nvim'
