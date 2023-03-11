@@ -8,6 +8,9 @@ hook_add = 'source ~/.local/share/dein/plugins/feline.lua'
 depends = ['nvim-web-devicons']
 
 [[plugins]]
+repo = 'github/copilot.vim'
+
+[[plugins]]
 repo = 'lewis6991/gitsigns.nvim'
 hook_add = 'source ~/.local/share/dein/plugins/gitsigns.lua'
 
