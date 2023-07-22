@@ -1,3 +1,5 @@
+let g:copilot_no_maps = v:true
+
 nnoremap [copilot] <Nop>
 nmap <C-c> [copilot]
 nnoremap [copilot]e :Copilot enable<CR>
