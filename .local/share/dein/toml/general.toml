@@ -1,6 +1,6 @@
 [[plugins]]
 repo = 'akinsho/toggleterm.nvim'
-rev = 'v2.9.0'
+rev = 'v2.11.0'
 hook_add = 'source ~/.local/share/dein/plugins/toggleterm.lua'
 
 [[plugins]]
