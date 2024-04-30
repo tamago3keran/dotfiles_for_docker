@@ -10,7 +10,7 @@ hook_add = 'source ~/.local/share/dein/plugins/nightfox.vim'
 
 [[plugins]]
 repo = 'github/copilot.vim'
-rev = 'v1.18.0'
+rev = 'v1.29.0'
 hook_add = 'source ~/.local/share/dein/plugins/copilot.vim'
 
 [[plugins]]
