@@ -6,7 +6,7 @@ hook_add = 'source ~/.local/share/dein/plugins/toggleterm.lua'
 [[plugins]]
 repo = 'EdenEast/nightfox.nvim'
 rev = 'v3.9.3'
-hook_add = 'source ~/.local/share/dein/plugins/nightfox.vim'
+hook_add = 'source ~/.local/share/dein/plugins/nightfox.lua'
 
 [[plugins]]
 repo = 'github/copilot.vim'
