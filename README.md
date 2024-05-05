@@ -15,18 +15,16 @@ There are some branches in this repository. Each branch has dotfiles, with diffe
 |Branch|Function|
 |:--:|:--|
 |base|neovim plugins|
-|dotfiles|neovim plugins + LSP ( Vim script )
+|dotfiles|neovim plugins + LSP ( Vim script )|
+|python|neovim plugins + LSP ( Python )|
 |react|neovim plugins + LSP ( ESLint, TypeScript Language Server )|
-|ruby|neovim plugins + LSP ( Ruby )
+|ruby|neovim plugins + LSP ( Ruby )|
 
 ## Setup
 I usually use a MacBook. And I use Docker for development. So the following setup assumes that you are using Docker on a MacBook.
 
-### iTerm2
-The dotfiles are not displayed properly with Terminal.app which is installed by default on Mac. So I recommend using iTerm2. Please download iTerms2 on [the Website](https://iterm2.com).
-
-### NERD FONTS
-Download the [NERD FONTS](https://www.nerdfonts.com) of your choice to display 'iconic fonts' on iTerm2. After downloaded, move the font files to the `/Users/:UserName/Library/Fonts` directory. And then, set the downloaded font to Non-ASCII Font in iTerm2.
+### WezTerm
+The dotfiles are not displayed properly with Terminal.app which is installed by default on Mac. So I recommend using WezTerm. Please download WezTerm on [the Website](https://wezfurlong.org/wezterm/index.html).
 
 ### Docker
 First, please install [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac-install/).
