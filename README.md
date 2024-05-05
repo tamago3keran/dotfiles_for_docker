@@ -34,19 +34,11 @@ I have created [the Docker image](https://hub.docker.com/repository/docker/tamag
 So after installing Docker, run the following command to pull the Docker image.
 
 ```bash
-> docker pull tamago3keran/dotfiles:base
+> docker pull --platform linux/amd64 tamago3keran/dotfiles:base
 ```
 
 Finally, run command of `docker run` based on the pulled the Docker image.
 
 ```bash
 > docker run --name base -it tamago3keran/dotfiles:base
-```
-
-## Note
-### Case: Mac with Apple silicon
-When you run docker run command on Mac with Apple silicon, please you specified the platform option.
-
-```bash
-> docker run --name neovim --platform linux/amd64 -it tamago3keran/dotfiles:neovim
 ```
