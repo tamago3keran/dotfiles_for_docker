@@ -32,7 +32,7 @@ hook_add = 'source ~/.local/share/dein/plugins/tabby.lua'
 
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
-rev = 'v0.1.7'
+rev = 'v0.1.8'
 hook_add = 'source ~/.local/share/dein/plugins/lspconfig.lua'
 
 [[plugins]]
