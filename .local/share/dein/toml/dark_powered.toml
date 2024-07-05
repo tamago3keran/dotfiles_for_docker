@@ -51,7 +51,7 @@ repo = 'Shougo/ddu-kind-file'
 
 [[plugins]]
 repo = 'Shougo/ddu.vim'
-rev = 'v4.0.0'
+rev = 'v4.1.1'
 hook_add = 'source ~/.local/share/dein/plugins/ddu.vim'
 depends = ['denops.vim']
 

@@ -15,7 +15,7 @@ call ddu#custom#patch_global(#{
     \       winCol: &columns / 8,
     \       winRow: &lines / 4 - 9,
     \       winWidth: (&columns - (&columns / 4)) / 2,
-    \       winHeight: &lines - (&lines / 4),
+    \       winHeight: &lines - (&lines / 5),
     \       previewFloating: v:true,
     \       previewFloatingBorder: 'rounded',
     \       previewFloatingTitle: ' Preview ',
@@ -23,7 +23,7 @@ call ddu#custom#patch_global(#{
     \       previewCol: (&columns / 8) + (&columns - (&columns / 4)) / 2 + 2,
     \       previewRow: (&lines / 4 - 9) + (&lines - (&lines / 4)) + 5,
     \       previewWidth: (&columns - (&columns / 4)) / 2,
-    \       previewHeight: (&lines - (&lines / 4)) + 3,
+    \       previewHeight: &lines - (&lines / 5),
     \     }
     \   },
     \   sourceOptions: #{
