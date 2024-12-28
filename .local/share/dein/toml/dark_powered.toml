@@ -30,6 +30,7 @@ repo = 'Shougo/ddu-ui-ff'
 
 [[plugins]]
 repo = 'Shougo/ddu-ui-filer'
+rev = 'v1.1.0'
 
 [[plugins]]
 repo = 'Shougo/ddu-source-file'
