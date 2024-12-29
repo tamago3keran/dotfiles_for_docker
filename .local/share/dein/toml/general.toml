@@ -42,4 +42,4 @@ hook_add = 'source ~/.local/share/dein/plugins/osc52.lua'
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
-rev = 'v6.0.11'
+rev = 'v7.0.4'
