@@ -72,6 +72,11 @@ call ddu#custom#patch_local('filer', #{
     \       indentationWidth: 2,
     \     },
     \   },
+    \   uiParams: #{
+    \     filer: #{
+    \       splitDirection: 'botright',
+    \     },
+    \   },
     \ })
 
 call ddu#custom#patch_local('grep', #{
