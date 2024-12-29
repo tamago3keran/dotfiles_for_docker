@@ -23,7 +23,7 @@ hook_add = 'source ~/.local/share/dein/plugins/startify.vim'
 
 [[plugins]]
 repo = 'nanozuki/tabby.nvim'
-rev = 'v2.5.1'
+rev = 'v2.7.4'
 hook_add = 'source ~/.local/share/dein/plugins/tabby.lua'
 
 [[plugins]]
