@@ -1,4 +1,8 @@
 [[plugins]]
+repo = 'vim-denops/denops.vim'
+rev = 'v7.0.4'
+
+[[plugins]]
 repo = 'akinsho/toggleterm.nvim'
 rev = 'v2.13.0'
 hook_add = 'source ~/.local/share/dein/plugins/toggleterm.lua'
@@ -39,7 +43,3 @@ depends = ['nvim-web-devicons']
 [[plugins]]
 repo = 'ojroques/nvim-osc52'
 hook_add = 'source ~/.local/share/dein/plugins/osc52.lua'
-
-[[plugins]]
-repo = 'vim-denops/denops.vim'
-rev = 'v7.0.4'

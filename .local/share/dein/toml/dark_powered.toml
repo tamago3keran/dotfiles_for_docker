@@ -1,4 +1,10 @@
 [[plugins]]
+repo = 'Shougo/ddc.vim'
+rev = 'v9.1.0'
+hook_add = 'source ~/.local/share/dein/plugins/ddc.vim'
+depends = ['denops.vim']
+
+[[plugins]]
 repo = 'Shougo/ddc-matcher_head'
 
 [[plugins]]
@@ -17,9 +23,9 @@ repo = 'Shougo/ddc-source-nvim-lsp'
 repo = 'Shougo/ddc-ui-pum'
 
 [[plugins]]
-repo = 'Shougo/ddc.vim'
-rev = 'v9.1.0'
-hook_add = 'source ~/.local/share/dein/plugins/ddc.vim'
+repo = 'Shougo/ddu.vim'
+rev = 'v9.3.0'
+hook_add = 'source ~/.local/share/dein/plugins/ddu.vim'
 depends = ['denops.vim']
 
 [[plugins]]
@@ -50,12 +56,6 @@ repo = 'Shougo/ddu-filter-matcher_ignore_files'
 
 [[plugins]]
 repo = 'Shougo/ddu-kind-file'
-
-[[plugins]]
-repo = 'Shougo/ddu.vim'
-rev = 'v9.3.0'
-hook_add = 'source ~/.local/share/dein/plugins/ddu.vim'
-depends = ['denops.vim']
 
 [[plugins]]
 repo = 'shun/ddu-source-buffer'
