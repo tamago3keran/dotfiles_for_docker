@@ -27,6 +27,7 @@ repo = 'Shougo/ddu-filter-sorter_alpha'
 
 [[plugins]]
 repo = 'Shougo/ddu-ui-ff'
+rev = 'v1.6.0'
 
 [[plugins]]
 repo = 'Shougo/ddu-ui-filer'
