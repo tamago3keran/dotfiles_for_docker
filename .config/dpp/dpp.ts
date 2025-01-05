@@ -60,7 +60,7 @@ export class Config extends BaseConfig {
       const tomlPromises = [
         { path: "~/.config/tomls/general.toml", lazy: false },
         { path: "~/.config/tomls/general_lazy.toml", lazy: true },
-        { path: "~/.config/tomls/dark_powered.toml", lazy: false },
+        { path: "~/.config/tomls/dark_powered.toml", lazy: true },
       ].map((tomlFile) =>
         action.callback({
           denops: args.denops,
