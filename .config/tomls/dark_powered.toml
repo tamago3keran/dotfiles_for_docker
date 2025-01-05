@@ -5,21 +5,27 @@ hook_add = 'source ~/.config/hooks/ddc.lua'
 
 [[plugins]]
 repo = 'Shougo/ddc-matcher_head'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-sorter_rank'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-source-around'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-source-copilot'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-source-nvim-lsp'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-ui-pum'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu.vim'
@@ -28,38 +34,50 @@ hook_add = 'source ~/.config/hooks/ddu.lua'
 
 [[plugins]]
 repo = 'Shougo/ddu-filter-sorter_alpha'
+on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-ui-ff'
 rev = 'v1.6.0'
+on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-ui-filer'
 rev = 'v1.5.0'
+on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-source-file'
+on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-source-file_rec'
+on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-filter-converter_display_word'
+on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-filter-matcher_substring'
+on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-filter-matcher_ignore_files'
+on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-kind-file'
+on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'shun/ddu-source-buffer'
+on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'shun/ddu-source-rg'
+on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'tamago3keran/ddu-column-devicon_filename'
+on_source = 'ddu.vim'
