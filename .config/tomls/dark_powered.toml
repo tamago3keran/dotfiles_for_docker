@@ -1,8 +1,7 @@
 [[plugins]]
 repo = 'Shougo/ddc.vim'
 rev = 'v9.1.0'
-hook_add = 'source ~/.local/share/dein/plugins/ddc.vim'
-depends = ['denops.vim']
+hook_add = 'source ~/.config/hooks/ddc.lua'
 
 [[plugins]]
 repo = 'Shougo/ddc-matcher_head'
@@ -25,8 +24,7 @@ repo = 'Shougo/ddc-ui-pum'
 [[plugins]]
 repo = 'Shougo/ddu.vim'
 rev = 'v9.3.0'
-hook_add = 'source ~/.local/share/dein/plugins/ddu.vim'
-depends = ['denops.vim']
+hook_add = 'source ~/.config/hooks/ddu.lua'
 
 [[plugins]]
 repo = 'Shougo/ddu-filter-sorter_alpha'

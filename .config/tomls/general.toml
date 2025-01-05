@@ -1,0 +1,45 @@
+[[plugins]]
+repo = 'akinsho/toggleterm.nvim'
+rev = 'v2.13.0'
+hook_add = 'source ~/.config/hooks/toggleterm.lua'
+
+[[plugins]]
+repo = 'EdenEast/nightfox.nvim'
+rev = 'v3.10.0'
+hook_add = 'source ~/.config/hooks/nightfox.lua'
+
+[[plugins]]
+repo = 'github/copilot.vim'
+rev = 'v1.41.0'
+hook_add = 'source ~/.config/hooks/copilot.lua'
+
+[[plugins]]
+repo = 'lewis6991/gitsigns.nvim'
+hook_add = 'source ~/.config/hooks/gitsigns.lua'
+
+[[plugins]]
+repo = 'mhinz/vim-startify'
+hook_add = 'source ~/.config/hooks/startify.lua'
+
+[[plugins]]
+repo = 'nanozuki/tabby.nvim'
+rev = 'v2.7.4'
+hook_add = 'source ~/.config/hooks/tabby.lua'
+
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'
+rev = 'v1.2.0'
+hook_add = 'source ~/.config/hooks/lspconfig.lua'
+
+[[plugins]]
+repo = 'nvim-tree/nvim-web-devicons'
+on_source = ['feline.nvim']
+
+[[plugins]]
+repo = 'nvim-lualine/lualine.nvim'
+hook_add = 'source ~/.config/hooks/lualine.lua'
+depends = ['nvim-web-devicons']
+
+[[plugins]]
+repo = 'ojroques/nvim-osc52'
+hook_add = 'source ~/.config/hooks/osc52.lua'
