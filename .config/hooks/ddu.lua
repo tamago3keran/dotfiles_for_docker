@@ -31,7 +31,7 @@ vim.fn['ddu#custom#patch_global']({
   },
   filterParams = {
     matcher_substring = { highlightMatched = 'Title' },
-    matcher_ignore_files = { ignoreGlobs = { '.git' } }
+    matcher_ignore_files = { ignoreGlobs = { '.git', 'vendor' } }
   },
   kindOptions = {
     file = { defaultAction = 'open' }
