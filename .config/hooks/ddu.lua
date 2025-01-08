@@ -1,3 +1,10 @@
+local floating_window_config = {
+  margin_left = math.floor(vim.o.columns * 0.1),
+  margin_top = math.floor(vim.o.lines * 0.1),
+  width = math.floor(vim.o.columns * 0.4),
+  height = math.floor(vim.o.lines * 0.8)
+}
+
 vim.fn['ddu#custom#patch_global']({
   ui = 'ff',
   uiParams = {
@@ -12,18 +19,18 @@ vim.fn['ddu#custom#patch_global']({
       filterFloatingTitle = ' Filter ',
       filterFloatingTitlePos = 'center',
       filterFloatingPosition = 'bottom',
-      winCol = math.floor(vim.o.columns / 8),
-      winRow = math.floor(vim.o.lines / 4 - 9),
-      winWidth = math.floor((vim.o.columns - (vim.o.columns / 4)) / 2),
-      winHeight = math.floor(vim.o.lines - (vim.o.lines / 5)),
+      winCol = floating_window_config.margin_left - 1,
+      winRow = floating_window_config.margin_top,
+      winWidth = floating_window_config.width,
+      winHeight = floating_window_config.height,
       previewFloating = true,
       previewFloatingBorder = 'rounded',
       previewFloatingTitle = ' Preview ',
       previewFloatingTitlePos = 'center',
-      previewCol = math.floor((vim.o.columns / 8) + ((vim.o.columns - (vim.o.columns / 4)) / 2) + 2),
-      previewRow = math.floor((vim.o.lines / 4 - 9) + (vim.o.lines - (vim.o.lines / 4)) + 5),
-      previewWidth = math.floor((vim.o.columns - (vim.o.columns / 4)) / 2),
-      previewHeight = math.floor(vim.o.lines - (vim.o.lines / 5)),
+      previewCol = floating_window_config.margin_left + floating_window_config.width + 1, 
+      previewRow = floating_window_config.margin_top + floating_window_config.height + 2,
+      previewWidth = floating_window_config.width,
+      previewHeight = floating_window_config.height,
     }
   },
   sourceOptions = {
