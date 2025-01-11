@@ -6,6 +6,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.splitright = true
+vim.opt.winblend = 15
 
 local dppBase = "~/.cache/dpp"
 local dppSrc = "~/.cache/dpp/repos/github.com/Shougo/dpp.vim"
