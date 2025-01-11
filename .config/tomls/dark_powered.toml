@@ -81,3 +81,8 @@ on_source = 'ddu.vim'
 [[plugins]]
 repo = 'tamago3keran/ddu-column-devicon_filename'
 on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'Shougo/deol.nvim'
+on_source = 'ddu.vim'
+hook_add = 'source ~/.config/hooks/deol.lua'
