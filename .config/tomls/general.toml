@@ -1,9 +1,4 @@
 [[plugins]]
-repo = 'akinsho/toggleterm.nvim'
-rev = 'v2.13.0'
-hook_add = 'source ~/.config/hooks/toggleterm.lua'
-
-[[plugins]]
 repo = 'EdenEast/nightfox.nvim'
 rev = 'v3.10.0'
 hook_add = 'source ~/.config/hooks/nightfox.lua'
