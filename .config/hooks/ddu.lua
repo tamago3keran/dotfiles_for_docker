@@ -147,12 +147,3 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.api.nvim_buf_set_keymap(0, "i", "<Esc>", "<Esc><Cmd>call ddu#ui#do_action('quit')<CR>", { noremap = true, silent = true })
   end
 })
-
-vim.api.nvim_create_augroup("transparent-windows", { clear = true })
-vim.api.nvim_create_autocmd("FileType", {
-  group = "transparent-windows",
-  pattern = { "ddu-ff", "ddu-ff-filter" },
-  callback = function()
-    vim.opt.winblend = 15
-  end
-})
