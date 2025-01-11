@@ -48,9 +48,6 @@ vim.fn['ddu#custom#patch_global']({
 vim.fn['ddu#custom#patch_local']('buffer', {
   sourceOptions = {
     buffer = { matchers = { 'matcher_substring' } }
-  },
-  uiParams = {
-    ff = { startFilter = true }
   }
 })
 
@@ -76,9 +73,6 @@ vim.fn['ddu#custom#patch_local']('grep', {
   },
   sourceParams = {
     rg = { args = { '--hidden', '--column' } }
-  },
-  uiParams = {
-    ff = { startFilter = true }
   }
 })
 
@@ -88,9 +82,6 @@ vim.fn['ddu#custom#patch_local']('file_rec', {
   },
   sourceParams = {
     file_rec = { ignoredDirectories = { '.git' } }
-  },
-  uiParams = {
-    ff = { startFilter = true }
   }
 })
 
