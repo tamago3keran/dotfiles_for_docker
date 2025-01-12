@@ -30,7 +30,7 @@ if dpp.load_state(dppBase) then
   vim.api.nvim_create_autocmd("User", {
     pattern = "DenopsReady",
     callback = function()
-      vim.notify("dpp load_state() is failed")
+      vim.notify("dpp load_state() is failed", "info", {title = "dpp.vim"})
       dpp.make_state(dppBase, dppConfig)
     end,
   })
@@ -55,7 +55,7 @@ end
 vim.api.nvim_create_autocmd("User", {
   pattern = "Dpp:makeStatePost",
   callback = function()
-    vim.notify("dpp make_state() is done")
+    vim.notify("dpp make_state() is done", "info", {title = "dpp.vim"})
   end,
 })
 
