@@ -1,0 +1,38 @@
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+rev = 'v9.1.0'
+hook_add = 'source ~/.config/hooks/ddc.lua'
+
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-sorter_rank'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-source-around'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-source-copilot'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-source-nvim-lsp'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-ui-pum'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'matsui54/denops-popup-preview.vim'
+hook_source = 'source ~/.config/hooks/denops-popup-preview.lua'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/pum.vim'
+hook_source = 'source ~/.config/hooks/pum.lua'
+on_source = 'ddc.vim'
