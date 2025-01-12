@@ -1,33 +1,4 @@
 [[plugins]]
-repo = 'Shougo/ddc.vim'
-rev = 'v9.1.0'
-hook_add = 'source ~/.config/hooks/ddc.lua'
-
-[[plugins]]
-repo = 'Shougo/ddc-matcher_head'
-on_source = 'ddc.vim'
-
-[[plugins]]
-repo = 'Shougo/ddc-sorter_rank'
-on_source = 'ddc.vim'
-
-[[plugins]]
-repo = 'Shougo/ddc-source-around'
-on_source = 'ddc.vim'
-
-[[plugins]]
-repo = 'Shougo/ddc-source-copilot'
-on_source = 'ddc.vim'
-
-[[plugins]]
-repo = 'Shougo/ddc-source-nvim-lsp'
-on_source = 'ddc.vim'
-
-[[plugins]]
-repo = 'Shougo/ddc-ui-pum'
-on_source = 'ddc.vim'
-
-[[plugins]]
 repo = 'Shougo/ddu.vim'
 rev = 'v9.3.0'
 hook_add = 'source ~/.config/hooks/ddu.lua'
@@ -81,8 +52,3 @@ on_source = 'ddu.vim'
 [[plugins]]
 repo = 'tamago3keran/ddu-column-devicon_filename'
 on_source = 'ddu.vim'
-
-[[plugins]]
-repo = 'Shougo/deol.nvim'
-on_source = 'ddu.vim'
-hook_add = 'source ~/.config/hooks/deol.lua'
