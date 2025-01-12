@@ -1,0 +1,19 @@
+[[plugins]]
+repo = 'Shougo/dpp.vim'
+rev = 'v4.1.0'
+
+[[plugins]]
+repo = 'Shougo/dpp-ext-installer'
+rev = 'v1.3.0'
+
+[[plugins]]
+repo = 'Shougo/dpp-protocol-git'
+rev = 'v1.1.1'
+
+[[plugins]]
+repo = 'Shougo/dpp-ext-lazy'
+rev = 'v1.5.0'
+
+[[plugins]]
+repo = 'Shougo/dpp-ext-toml'
+rev = 'v1.3.0'
