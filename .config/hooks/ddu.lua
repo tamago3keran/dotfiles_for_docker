@@ -24,6 +24,7 @@ vim.fn['ddu#custom#patch_global']({
       winWidth = floating_window_config.width,
       winHeight = floating_window_config.height,
       previewFloating = true,
+      previewFloatingZindex = 2,
       previewFloatingBorder = 'rounded',
       previewFloatingTitle = ' Preview ',
       previewFloatingTitlePos = 'center',
