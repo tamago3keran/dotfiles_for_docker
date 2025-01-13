@@ -43,8 +43,3 @@ hook_add = 'source ~/.config/hooks/osc52.lua'
 repo = 'rcarriga/nvim-notify'
 rev = 'v3.15.0'
 hook_add = 'source ~/.config/hooks/nvim-notify.lua'
-
-[[plugins]]
-repo = 'nvim-treesitter/nvim-treesitter'
-rev = 'v0.9.3'
-hook_add = 'source ~/.config/hooks/nvim-treesitter.lua'
