@@ -1,3 +1,4 @@
+-- lua_add {{{
 vim.opt.completeopt:remove("preview")
 
 vim.fn['ddc#custom#patch_global']('ui', 'pum')
@@ -20,3 +21,4 @@ vim.fn['ddc#custom#patch_global']('sourceOptions', {
 })
 
 vim.fn['ddc#enable']()
+-- }}}

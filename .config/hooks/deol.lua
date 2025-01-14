@@ -1,3 +1,4 @@
+-- lua_add {{{
 local floating_window_config = {
   margin_left = math.floor(vim.o.columns * 0.05),
   margin_top = math.floor(vim.o.lines * 0.1),
@@ -18,3 +19,4 @@ vim.g.deol_options = {
 vim.api.nvim_set_keymap("n", "<C-t>", "<Cmd>call deol#start(g:deol_options)<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-t>", "<Cmd>call deol#start(g:deol_options)<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+-- }}}
