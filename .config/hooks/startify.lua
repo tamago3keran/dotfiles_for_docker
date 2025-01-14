@@ -1,3 +1,4 @@
+-- lua_source {{{
 vim.g.startify_custom_header = vim.fn['startify#center']({
   '                                                                                                             ',
   '                                                                                                             ',
@@ -49,3 +50,4 @@ vim.api.nvim_create_autocmd("User", {
     end
   end,
 })
+--- }}}

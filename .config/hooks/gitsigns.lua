@@ -1,3 +1,4 @@
+-- lua_source {{{
 require('gitsigns').setup {
   signcolumn = false,
   numhl = true,
@@ -30,3 +31,4 @@ require('gitsigns').setup {
     map('n', '<C-g>d', gs.preview_hunk)
   end
 }
+-- }}}

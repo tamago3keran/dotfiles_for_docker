@@ -1,30 +1,30 @@
 [[plugins]]
 repo = 'EdenEast/nightfox.nvim'
 rev = 'v3.10.0'
-hook_add = 'source ~/.config/hooks/nightfox.lua'
+hooks_file = '$HOOKS_DIR/nightfox.lua'
 
 [[plugins]]
 repo = 'github/copilot.vim'
 rev = 'v1.41.0'
-hook_add = 'source ~/.config/hooks/copilot.lua'
+hooks_file = '$HOOKS_DIR/copilot.lua'
 
 [[plugins]]
 repo = 'lewis6991/gitsigns.nvim'
-hook_add = 'source ~/.config/hooks/gitsigns.lua'
+hooks_file = '$HOOKS_DIR/gitsigns.lua'
 
 [[plugins]]
 repo = 'mhinz/vim-startify'
-hook_add = 'source ~/.config/hooks/startify.lua'
+hooks_file = '$HOOKS_DIR/startify.lua'
 
 [[plugins]]
 repo = 'nanozuki/tabby.nvim'
 rev = 'v2.7.4'
-hook_add = 'source ~/.config/hooks/tabby.lua'
+hooks_file = '$HOOKS_DIR/tabby.lua'
 
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
 rev = 'v1.2.0'
-hook_add = 'source ~/.config/hooks/lspconfig.lua'
+hooks_file = '$HOOKS_DIR/lspconfig.lua'
 
 [[plugins]]
 repo = 'nvim-tree/nvim-web-devicons'
@@ -32,19 +32,19 @@ on_source = ['feline.nvim']
 
 [[plugins]]
 repo = 'nvim-lualine/lualine.nvim'
-hook_add = 'source ~/.config/hooks/lualine.lua'
+hooks_file = '$HOOKS_DIR/lualine.lua'
 depends = ['nvim-web-devicons']
 
 [[plugins]]
 repo = 'ojroques/nvim-osc52'
-hook_add = 'source ~/.config/hooks/osc52.lua'
+hooks_file = '$HOOKS_DIR/osc52.lua'
 
 [[plugins]]
 repo = 'rcarriga/nvim-notify'
 rev = 'v3.15.0'
-hook_add = 'source ~/.config/hooks/nvim-notify.lua'
+hooks_file = '$HOOKS_DIR/nvim-notify.lua'
 
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
 rev = 'v0.9.3'
-hook_add = 'source ~/.config/hooks/nvim-treesitter.lua'
+hooks_file = '$HOOKS_DIR/nvim-treesitter.lua'

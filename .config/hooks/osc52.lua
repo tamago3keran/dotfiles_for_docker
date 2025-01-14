@@ -1,3 +1,4 @@
+-- lua_source {{{
 require('osc52').setup {}
 
 local function copy(lines, _)
@@ -19,3 +20,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
         end
     end,
 })
+-- }}}

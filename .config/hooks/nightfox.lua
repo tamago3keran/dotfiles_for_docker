@@ -1,3 +1,4 @@
+-- lua_source {{{
 vim.opt.termguicolors = true
 
 local fmt = string.format
@@ -175,3 +176,4 @@ require('nightfox').setup({
 })
 
 vim.cmd("colorscheme nightfox")
+-- }}}

@@ -1,3 +1,4 @@
+--- lua_source {{{
 local mode_utils = require('lualine.utils.mode')
 
 local vi = {
@@ -190,3 +191,4 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+-- }}}

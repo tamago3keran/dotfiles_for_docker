@@ -1,3 +1,4 @@
+-- lua_add {{{
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -39,3 +40,4 @@ end
 require'lspconfig'.solargraph.setup{
   on_attach = on_attach,
 }
+-- }}}
