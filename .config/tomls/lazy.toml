@@ -13,3 +13,7 @@ repo = 'nvim-treesitter/nvim-treesitter'
 rev = 'v0.9.3'
 hooks_file = '$HOOKS_DIR/nvim-treesitter.lua'
 on_event = 'BufRead'
+
+[[plugins]]
+repo = 'nvim-tree/nvim-web-devicons'
+on_source = ['feline.nvim']
