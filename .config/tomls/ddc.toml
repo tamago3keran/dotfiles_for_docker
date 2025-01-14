@@ -2,6 +2,7 @@
 repo = 'Shougo/ddc.vim'
 rev = 'v9.1.0'
 hooks_file = '$HOOKS_DIR/ddc.lua'
+on_event = ['InsertEnter', 'CmdlineEnter']
 
 [[plugins]]
 repo = 'Shougo/ddc-matcher_head'
