@@ -1,3 +1,4 @@
+-- lua_source {{{
 require('nvim-treesitter.configs').setup({
   ensure_installed = { "typescript" },
   highlight = {
@@ -5,3 +6,4 @@ require('nvim-treesitter.configs').setup({
     additional_vim_regex_highlighting = false,
   }
 })
+-- }}}

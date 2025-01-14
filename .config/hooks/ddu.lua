@@ -1,3 +1,4 @@
+-- lua_add {{{
 local floating_window_config = {
   margin_left = math.floor(vim.o.columns * 0.1),
   margin_top = math.floor(vim.o.lines * 0.1),
@@ -148,3 +149,4 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.api.nvim_buf_set_keymap(0, "i", "<Esc>", "<Esc><Cmd>call ddu#ui#do_action('quit')<CR>", { noremap = true, silent = true })
   end
 })
+-- }}}
