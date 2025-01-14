@@ -1,3 +1,4 @@
+-- lua_source {{{
 local filename = require("tabby.filename")
 
 local cwd = function()
@@ -50,3 +51,4 @@ local line = {
 require("tabby").setup {
   tabline = line,
 }
+-- }}}
