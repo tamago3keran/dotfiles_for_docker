@@ -27,10 +27,6 @@ rev = 'v1.2.0'
 hooks_file = '$HOOKS_DIR/lspconfig.lua'
 
 [[plugins]]
-repo = 'nvim-tree/nvim-web-devicons'
-on_source = ['feline.nvim']
-
-[[plugins]]
 repo = 'nvim-lualine/lualine.nvim'
 hooks_file = '$HOOKS_DIR/lualine.lua'
 depends = ['nvim-web-devicons']
