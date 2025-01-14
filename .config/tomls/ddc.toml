@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'Shougo/ddc.vim'
 rev = 'v9.1.0'
-hook_add = 'source ~/.config/hooks/ddc.lua'
+hooks_file = '$HOOKS_DIR/ddc.lua'
 
 [[plugins]]
 repo = 'Shougo/ddc-matcher_head'
@@ -29,10 +29,10 @@ on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'matsui54/denops-popup-preview.vim'
-hook_source = 'source ~/.config/hooks/denops-popup-preview.lua'
+hooks_file = '$HOOKS_DIR/denops-popup-preview.lua'
 on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/pum.vim'
-hook_source = 'source ~/.config/hooks/pum.lua'
+hooks_file = '$HOOKS_DIR/pum.lua'
 on_source = 'ddc.vim'

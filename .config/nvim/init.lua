@@ -24,6 +24,8 @@ vim.opt.runtimepath:prepend(dppToml)
 vim.opt.runtimepath:prepend(dppGit)
 vim.opt.runtimepath:prepend(denopsSrc)
 
+vim.env.HOOKS_DIR = "~/.config/hooks"
+
 local dpp = require("dpp")
 
 if dpp.load_state(dppBase) then

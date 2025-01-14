@@ -1,3 +1,4 @@
+-- lua_add {{{
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -43,3 +44,4 @@ require'lspconfig'.eslint.setup{
 require'lspconfig'.ts_ls.setup{
   on_attach = on_attach,
 }
+-- }}}
