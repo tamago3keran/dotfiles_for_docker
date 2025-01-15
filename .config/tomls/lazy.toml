@@ -15,5 +15,11 @@ hooks_file = '$HOOKS_DIR/nvim-treesitter.lua'
 on_event = 'BufRead'
 
 [[plugins]]
+repo = 'folke/ts-comments.nvim'
+rev = 'v1.5.0'
+hooks_file = '$HOOKS_DIR/ts-comments.lua'
+on_event = 'BufRead'
+
+[[plugins]]
 repo = 'nvim-tree/nvim-web-devicons'
 on_source = ['feline.nvim']
