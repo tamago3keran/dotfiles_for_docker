@@ -29,3 +29,8 @@ repo = 'rcarriga/nvim-notify'
 rev = 'v3.15.0'
 hooks_file = '$HOOKS_DIR/nvim-notify.lua'
 on_lua = 'notify'
+
+[[plugins]]
+repo = 'lewis6991/gitsigns.nvim'
+hooks_file = '$HOOKS_DIR/gitsigns.lua'
+on_event = 'BufRead'
