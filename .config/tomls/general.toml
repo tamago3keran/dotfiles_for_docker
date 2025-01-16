@@ -4,11 +4,6 @@ rev = 'v3.10.0'
 hooks_file = '$HOOKS_DIR/nightfox.lua'
 
 [[plugins]]
-repo = 'github/copilot.vim'
-rev = 'v1.41.0'
-hooks_file = '$HOOKS_DIR/copilot.lua'
-
-[[plugins]]
 repo = 'mhinz/vim-startify'
 hooks_file = '$HOOKS_DIR/startify.lua'
 
