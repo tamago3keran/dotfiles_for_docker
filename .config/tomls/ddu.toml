@@ -2,6 +2,7 @@
 repo = 'Shougo/ddu.vim'
 rev = 'v9.3.0'
 hooks_file = '$HOOKS_DIR/ddu.lua'
+on_func = 'ddu#start'
 
 [[plugins]]
 repo = 'Shougo/ddu-filter-sorter_alpha'
