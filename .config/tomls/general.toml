@@ -9,10 +9,6 @@ rev = 'v1.41.0'
 hooks_file = '$HOOKS_DIR/copilot.lua'
 
 [[plugins]]
-repo = 'lewis6991/gitsigns.nvim'
-hooks_file = '$HOOKS_DIR/gitsigns.lua'
-
-[[plugins]]
 repo = 'mhinz/vim-startify'
 hooks_file = '$HOOKS_DIR/startify.lua'
 
