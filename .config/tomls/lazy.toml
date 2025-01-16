@@ -40,3 +40,8 @@ repo = 'github/copilot.vim'
 rev = 'v1.41.0'
 hooks_file = '$HOOKS_DIR/copilot.lua'
 on_source = "ddc.vim"
+
+[[plugins]]
+repo = 'ojroques/nvim-osc52'
+hooks_file = '$HOOKS_DIR/osc52.lua'
+on_event = 'TextYankPost'
