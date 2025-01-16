@@ -34,8 +34,3 @@ depends = ['nvim-web-devicons']
 [[plugins]]
 repo = 'ojroques/nvim-osc52'
 hooks_file = '$HOOKS_DIR/osc52.lua'
-
-[[plugins]]
-repo = 'rcarriga/nvim-notify'
-rev = 'v3.15.0'
-hooks_file = '$HOOKS_DIR/nvim-notify.lua'
