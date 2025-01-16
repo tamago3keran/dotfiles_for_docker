@@ -1,4 +1,4 @@
--- lua_source {{{
+-- lua_add {{{
 local notify = require("notify")
 vim.notify = notify
 
