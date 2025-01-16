@@ -1,45 +1,45 @@
 [[plugins]]
 repo = 'windwp/nvim-autopairs'
-hooks_file = '$HOOKS_DIR/autopairs.lua'
 on_event = 'InsertEnter'
+hooks_file = '$HOOKS_DIR/autopairs.lua'
 
 [[plugins]]
 repo = 'Shougo/deol.nvim'
-hooks_file = '$HOOKS_DIR/deol.lua'
 on_event = 'TermOpen'
+hooks_file = '$HOOKS_DIR/deol.lua'
 
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
 rev = 'v0.9.3'
-hooks_file = '$HOOKS_DIR/nvim-treesitter.lua'
 on_event = 'BufRead'
+hooks_file = '$HOOKS_DIR/nvim-treesitter.lua'
 
 [[plugins]]
 repo = 'folke/ts-comments.nvim'
 rev = 'v1.5.0'
-hooks_file = '$HOOKS_DIR/ts-comments.lua'
 on_event = 'BufRead'
+hooks_file = '$HOOKS_DIR/ts-comments.lua'
 
 [[plugins]]
 repo = 'nvim-tree/nvim-web-devicons'
-on_source = ['feline.nvim']
+on_source = 'feline.nvim'
 
 [[plugins]]
 repo = 'rcarriga/nvim-notify'
 rev = 'v3.15.0'
-hooks_file = '$HOOKS_DIR/nvim-notify.lua'
 on_lua = 'notify'
+hooks_file = '$HOOKS_DIR/nvim-notify.lua'
 
 [[plugins]]
 repo = 'lewis6991/gitsigns.nvim'
-hooks_file = '$HOOKS_DIR/gitsigns.lua'
 on_event = 'BufRead'
+hooks_file = '$HOOKS_DIR/gitsigns.lua'
 
 [[plugins]]
 repo = 'github/copilot.vim'
 rev = 'v1.41.0'
 hooks_file = '$HOOKS_DIR/copilot.lua'
-on_source = "ddc.vim"
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'ojroques/nvim-osc52'
