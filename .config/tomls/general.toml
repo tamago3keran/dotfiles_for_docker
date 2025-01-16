@@ -21,7 +21,3 @@ hooks_file = '$HOOKS_DIR/lspconfig.lua'
 repo = 'nvim-lualine/lualine.nvim'
 hooks_file = '$HOOKS_DIR/lualine.lua'
 depends = ['nvim-web-devicons']
-
-[[plugins]]
-repo = 'ojroques/nvim-osc52'
-hooks_file = '$HOOKS_DIR/osc52.lua'
