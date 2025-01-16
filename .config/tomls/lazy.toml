@@ -34,3 +34,9 @@ on_lua = 'notify'
 repo = 'lewis6991/gitsigns.nvim'
 hooks_file = '$HOOKS_DIR/gitsigns.lua'
 on_event = 'BufRead'
+
+[[plugins]]
+repo = 'github/copilot.vim'
+rev = 'v1.41.0'
+hooks_file = '$HOOKS_DIR/copilot.lua'
+on_source = "ddc.vim"
