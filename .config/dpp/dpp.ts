@@ -58,10 +58,10 @@ export class Config extends BaseConfig {
       const action = tomlExt.actions.load;
 
       const tomlPromises = [
-        { path: "~/.config/tomls/general.toml", lazy: false },
-        { path: "~/.config/tomls/ddu.toml", lazy: true },
-        { path: "~/.config/tomls/ddc.toml", lazy: true },
-        { path: "~/.config/tomls/lazy.toml", lazy: true }
+        { path: "$TOMLS_DIR/general.toml", lazy: false },
+        { path: "$TOMLS_DIR/ddu.toml", lazy: true },
+        { path: "$TOMLS_DIR/ddc.toml", lazy: true },
+        { path: "$TOMLS_DIR/lazy.toml", lazy: true }
       ].map((tomlFile) =>
         action.callback({
           denops: args.denops,
@@ -126,7 +126,7 @@ export class Config extends BaseConfig {
     }
 
     const checkFiles = [];
-    for await (const file of expandGlob(`${Deno.env.get("~/.config")}/*`)) {
+    for await (const file of expandGlob(`${Deno.env.get("CONFIG_DIR")}/*`)) {
       checkFiles.push(file.path);
     }
 
