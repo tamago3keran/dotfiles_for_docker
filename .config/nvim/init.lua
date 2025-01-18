@@ -13,6 +13,19 @@ vim.env.HOOKS_DIR = "~/.config/hooks"
 vim.env.TOMLS_DIR = "~/.config/tomls"
 vim.env.CACHE_DIR = "~/.cache"
 
+vim.g.floating_window_with_preview_config = {
+  margin_left = math.floor(vim.o.columns * 0.1),
+  margin_top = math.floor(vim.o.lines * 0.1),
+  width = math.floor(vim.o.columns * 0.4),
+  height = math.floor(vim.o.lines * 0.8)
+}
+vim.g.floating_window_config = {
+  margin_left = math.floor(vim.o.columns * 0.05),
+  margin_top = math.floor(vim.o.lines * 0.1),
+  width = math.floor(vim.o.columns * 0.9),
+  height = math.floor(vim.o.lines * 0.8),
+}
+
 local dppBase = vim.env.CACHE_DIR .. "/dpp"
 local dppSrc = vim.env.CACHE_DIR .. "/dpp/repos/github.com/Shougo/dpp.vim"
 local dppLazy = vim.env.CACHE_DIR .. "/dpp/repos/github.com/Shougo/dpp-ext-lazy"
