@@ -1,17 +1,11 @@
 -- lua_add {{{
-local floating_window_config = {
-  margin_left = math.floor(vim.o.columns * 0.05),
-  margin_top = math.floor(vim.o.lines * 0.1),
-  width = math.floor(vim.o.columns * 0.9),
-  height = math.floor(vim.o.lines * 0.8),
-}
 vim.g.deol_options = {
   command = 'bash',
   split = 'floating',
-  wincol = floating_window_config.margin_left,
-  winrow = floating_window_config.margin_top,
-  winwidth = floating_window_config.width,
-  winheight = floating_window_config.height,
+  wincol = vim.g.floating_window_config.margin_left,
+  winrow = vim.g.floating_window_config.margin_top,
+  winwidth = vim.g.floating_window_config.width,
+  winheight = vim.g.floating_window_config.height,
   floating_border = 'rounded',
   toggle = true,
 }

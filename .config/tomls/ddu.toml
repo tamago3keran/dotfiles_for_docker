@@ -12,19 +12,23 @@ on_source = 'ddu.vim'
 repo = 'Shougo/ddu-ui-ff'
 rev = 'v1.6.0'
 on_source = 'ddu.vim'
+hooks_file = '$HOOKS_DIR/ddu-ui-ff.lua'
 
 [[plugins]]
 repo = 'Shougo/ddu-ui-filer'
 rev = 'v1.5.0'
 on_source = 'ddu.vim'
+hooks_file = '$HOOKS_DIR/ddu-ui-filer.lua'
 
 [[plugins]]
 repo = 'Shougo/ddu-source-file'
 on_source = 'ddu.vim'
+hooks_file = '$HOOKS_DIR/ddu-source-file.lua'
 
 [[plugins]]
 repo = 'Shougo/ddu-source-file_rec'
 on_source = 'ddu.vim'
+hooks_file = '$HOOKS_DIR/ddu-source-file_rec.lua'
 
 [[plugins]]
 repo = 'Shougo/ddu-filter-converter_display_word'
@@ -49,10 +53,12 @@ on_source = 'ddu.vim'
 [[plugins]]
 repo = 'shun/ddu-source-buffer'
 on_source = 'ddu.vim'
+hooks_file = '$HOOKS_DIR/ddu-source-buffer.lua'
 
 [[plugins]]
 repo = 'shun/ddu-source-rg'
 on_source = 'ddu.vim'
+hooks_file = '$HOOKS_DIR/ddu-source-rg.lua'
 
 [[plugins]]
 repo = 'tamago3keran/ddu-column-devicon_filename'
@@ -61,3 +67,4 @@ on_source = 'ddu.vim'
 [[plugins]]
 repo = 'tamago3keran/ddu-source-message'
 on_source = 'ddu.vim'
+hooks_file = '$HOOKS_DIR/ddu-source-message.lua'
