@@ -43,7 +43,8 @@ vim.fn['ddu#custom#patch_global']({
     matcher_ignore_files = { ignoreGlobs = { '.git' } }
   },
   kindOptions = {
-    file = { defaultAction = 'open' }
+    file = { defaultAction = 'open' },
+    word = { defaultAction = 'yank' },
   }
 })
 
@@ -87,12 +88,37 @@ vim.fn['ddu#custom#patch_local']('file_rec', {
   }
 })
 
+vim.fn['ddu#custom#patch_local']('message', {
+  ui = 'ff',
+  uiParams = {
+    ff = {
+      prompt = '> ',
+      split = 'floating',
+      floatingBorder = 'rounded',
+      floatingTitle = ' Fuzzy Finder ',
+      floatingTitlePos = 'center',
+      filterFloatingTitle = ' Filter ',
+      filterFloatingTitlePos = 'center',
+      filterFloatingPosition = 'bottom',
+      winCol = floating_window_config.margin_left,
+      winRow = floating_window_config.margin_top,
+      winWidth = math.floor(vim.o.columns * 0.8),
+      winHeight = math.floor(vim.o.lines * 0.8),
+    }
+  },
+  sourceOptions = {
+    message = { matchers = { 'matcher_substring' } }
+  },
+})
+
+
 vim.api.nvim_set_keymap("n", "[ddu]", "<Nop>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-d>", "[ddu]", { noremap = false })
 vim.api.nvim_set_keymap("n", "[ddu]b", "<Cmd>call ddu#start({'name': 'buffer', 'sources': [{'name': 'buffer'}]})<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "[ddu]f", "<Cmd>call ddu#start({'name': 'filer', 'sources': [{'name': 'file', 'params': {}}]})<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "[ddu]g", "<Cmd>call ddu#start({'name': 'grep', 'sources': [{'name': 'rg', 'params': {'input': input('Pattern: ')}}]})<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "[ddu]p", "<Cmd>call ddu#start({'name': 'file_rec', 'sources': [{'name': 'file_rec'}]})<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "[ddu]m", "<Cmd>call ddu#start({'name': 'message', 'sources': [{'name': 'message'}]})<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_create_autocmd({ "TabEnter", "CursorHold", "FocusGained" }, {
   buffer = 0,

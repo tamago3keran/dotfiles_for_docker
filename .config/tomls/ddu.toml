@@ -57,3 +57,7 @@ on_source = 'ddu.vim'
 [[plugins]]
 repo = 'tamago3keran/ddu-column-devicon_filename'
 on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'tamago3keran/ddu-source-message'
+on_source = 'ddu.vim'
