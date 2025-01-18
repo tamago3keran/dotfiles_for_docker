@@ -43,6 +43,10 @@ repo = 'Shougo/ddu-kind-file'
 on_source = 'ddu.vim'
 
 [[plugins]]
+repo = 'Shougo/ddu-kind-word'
+on_source = 'ddu.vim'
+
+[[plugins]]
 repo = 'shun/ddu-source-buffer'
 on_source = 'ddu.vim'
 
