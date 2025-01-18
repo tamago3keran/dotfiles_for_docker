@@ -5,12 +5,18 @@ on_event = ['InsertEnter', 'CmdlineEnter']
 hooks_file = '$HOOKS_DIR/ddc.lua'
 
 [[plugins]]
-repo = 'Shougo/ddc-matcher_head'
+repo = 'Shougo/ddc-ui-pum'
 on_source = 'ddc.vim'
 
 [[plugins]]
-repo = 'Shougo/ddc-sorter_rank'
+repo = 'matsui54/denops-popup-preview.vim'
 on_source = 'ddc.vim'
+hooks_file = '$HOOKS_DIR/denops-popup-preview.lua'
+
+[[plugins]]
+repo = 'Shougo/pum.vim'
+on_source = 'ddc.vim'
+hooks_file = '$HOOKS_DIR/pum.lua'
 
 [[plugins]]
 repo = 'Shougo/ddc-source-around'
@@ -25,15 +31,9 @@ repo = 'Shougo/ddc-source-nvim-lsp'
 on_source = 'ddc.vim'
 
 [[plugins]]
-repo = 'Shougo/ddc-ui-pum'
+repo = 'Shougo/ddc-matcher_head'
 on_source = 'ddc.vim'
 
 [[plugins]]
-repo = 'matsui54/denops-popup-preview.vim'
+repo = 'Shougo/ddc-sorter_rank'
 on_source = 'ddc.vim'
-hooks_file = '$HOOKS_DIR/denops-popup-preview.lua'
-
-[[plugins]]
-repo = 'Shougo/pum.vim'
-on_source = 'ddc.vim'
-hooks_file = '$HOOKS_DIR/pum.lua'
