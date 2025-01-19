@@ -36,7 +36,7 @@ local vi = {
 }
 
 local function vi_bg_hl()
-  return vi.bg_colors[mode_utils.get_mode()] or "UserRvBlack"
+  return vi.bg_colors[mode_utils.get_mode()] or 'UserRvBlack'
 end
 
 local function vi_fg_hl()
@@ -49,7 +49,7 @@ local function diff_source()
     return {
       added = gitsigns.added,
       modified = gitsigns.changed,
-      removed = gitsigns.removed
+      removed = gitsigns.removed,
     }
   end
 end
@@ -67,7 +67,7 @@ local lualine_a = {
     icon = '',
     color = vi_fg_hl,
     padding = { left = 0, right = 1 },
-  }
+  },
 }
 
 local lualine_b = {
@@ -80,17 +80,17 @@ local lualine_b = {
     'diff',
     colored = true,
     diff_color = {
-      added    = 'UserGreen',
+      added = 'UserGreen',
       modified = 'UserYellow',
-      removed  = 'UserRed'
+      removed = 'UserRed',
     },
     symbols = {
-      added    = ' ',
+      added = ' ',
       modified = ' ',
-      removed = ' '
+      removed = ' ',
     },
-    source = diff_source
-  }
+    source = diff_source,
+  },
 }
 
 local lualine_c = {
@@ -104,40 +104,40 @@ local lualine_c = {
     path = 1,
     symbols = {
       modified = '●',
-      readonly = '🔒'
-    }
-  }
+      readonly = '🔒',
+    },
+  },
 }
 
 local lualine_x = {
   {
     'filetype',
     icons_enabled = false,
-    color = 'UserSLAlt'
+    color = 'UserSLAlt',
   },
   {
     'fileformat',
-    color = 'StatusLine'
+    color = 'StatusLine',
   },
   {
     'encoding',
     color = 'StatusLine',
     padding = { right = 1 },
-  }
+  },
 }
 
 local lualine_y = {
   {
     'location',
-    color = 'UserRvBlack'
-  }
+    color = 'UserRvBlack',
+  },
 }
 
 local lualine_z = {
   {
     'progress',
     color = vi_bg_hl,
-  }
+  },
 }
 
 local inactive_lualine_c = {
@@ -146,12 +146,12 @@ local inactive_lualine_c = {
     path = 1,
     symbols = {
       modified = '●',
-      readonly = '🔒'
+      readonly = '🔒',
     },
-  }
+  },
 }
 
-require('lualine').setup {
+require('lualine').setup({
   options = {
     component_separators = '',
     section_separators = '',
@@ -168,7 +168,7 @@ require('lualine').setup {
       statusline = 1000,
       tabline = 1000,
       winbar = 1000,
-    }
+    },
   },
   sections = {
     lualine_a = lualine_a,
@@ -176,7 +176,7 @@ require('lualine').setup {
     lualine_c = lualine_c,
     lualine_x = lualine_x,
     lualine_y = lualine_y,
-    lualine_z = lualine_z
+    lualine_z = lualine_z,
   },
   inactive_sections = {
     lualine_a = {},
@@ -184,11 +184,11 @@ require('lualine').setup {
     lualine_c = inactive_lualine_c,
     lualine_x = {},
     lualine_y = {},
-    lualine_z = {}
+    lualine_z = {},
   },
   tabline = {},
   winbar = {},
   inactive_winbar = {},
-  extensions = {}
-}
+  extensions = {},
+})
 -- }}}
