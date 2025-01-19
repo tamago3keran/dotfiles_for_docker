@@ -1,3 +1,3 @@
 -- lua_source {{{
-require("nvim-autopairs").setup {}
+require('nvim-autopairs').setup({})
 -- }}}

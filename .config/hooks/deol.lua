@@ -10,7 +10,7 @@ vim.g.deol_options = {
   toggle = true,
 }
 
-vim.api.nvim_set_keymap("n", "<C-t>", "<Cmd>call deol#start(g:deol_options)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("t", "<C-t>", "<Cmd>call deol#start(g:deol_options)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-t>', '<Cmd>call deol#start(g:deol_options)<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<C-t>', '<Cmd>call deol#start(g:deol_options)<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
 -- }}}
