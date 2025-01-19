@@ -19,8 +19,12 @@ vim.fn['ddu#custom#patch_local']('file_rec', {
       previewFloatingBorder = 'rounded',
       previewFloatingTitle = ' Preview ',
       previewFloatingTitlePos = 'center',
-      previewCol = vim.g.floating_window_with_preview_config.margin_left + vim.g.floating_window_with_preview_config.width + 1, 
-      previewRow = vim.g.floating_window_with_preview_config.margin_top + vim.g.floating_window_with_preview_config.height + 2,
+      previewCol = vim.g.floating_window_with_preview_config.margin_left
+        + vim.g.floating_window_with_preview_config.width
+        + 1,
+      previewRow = vim.g.floating_window_with_preview_config.margin_top
+        + vim.g.floating_window_with_preview_config.height
+        + 2,
       previewWidth = vim.g.floating_window_with_preview_config.width,
       previewHeight = vim.g.floating_window_with_preview_config.height,
     },
@@ -48,5 +52,10 @@ vim.fn['ddu#custom#patch_local']('file_rec', {
   },
 })
 
-vim.api.nvim_set_keymap("n", "[ddu]p", "<Cmd>call ddu#start({'name': 'file_rec', 'sources': [{'name': 'file_rec'}]})<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  'n',
+  '[ddu]p',
+  "<Cmd>call ddu#start({'name': 'file_rec', 'sources': [{'name': 'file_rec'}]})<CR>",
+  { noremap = true, silent = true }
+)
 -- }}}

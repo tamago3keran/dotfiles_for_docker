@@ -28,13 +28,13 @@ local function open_filer()
   local path = vim.t.ddu_ui_filer_path or vim.fn.getcwd()
 
   vim.fn['ddu#start']({
-    name = "filer",
+    name = 'filer',
     sources = { {
-      name = "file",
-      options = { path = path }
-    } }
+      name = 'file',
+      options = { path = path },
+    } },
   })
 end
-vim.api.nvim_create_user_command("OpenFiler", open_filer, {})
-vim.api.nvim_set_keymap("n", "[ddu]f", "<Cmd>OpenFiler<CR>", { noremap = true, silent = true })
+vim.api.nvim_create_user_command('OpenFiler', open_filer, {})
+vim.api.nvim_set_keymap('n', '[ddu]f', '<Cmd>OpenFiler<CR>', { noremap = true, silent = true })
 -- }}}
