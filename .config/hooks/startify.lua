@@ -37,16 +37,16 @@ vim.g.startify_custom_header = vim.fn['startify#center']({
 })
 
 vim.g.startify_lists = {
-  { type = "sessions", header = { "   Sessions" } },
+  { type = 'sessions', header = { '   Sessions' } },
 }
 vim.g.startify_enable_special = 0
 
-vim.api.nvim_create_autocmd("User", {
-  pattern = "Startified",
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'Startified',
   callback = function()
-    local keys = { "i", "b", "s", "t", "v", "<CR>" }
+    local keys = { 'i', 'b', 's', 't', 'v', '<CR>' }
     for _, key in ipairs(keys) do
-      vim.api.nvim_buf_del_keymap(0, "n", key)
+      vim.api.nvim_buf_del_keymap(0, 'n', key)
     end
   end,
 })

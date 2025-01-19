@@ -1,23 +1,26 @@
 -- lua_source {{{
-require('osc52').setup {}
+require('osc52').setup({})
 
 local function copy(lines, _)
-    require('osc52').copy(table.concat(lines, '\n'))
+  require('osc52').copy(table.concat(lines, '\n'))
 end
 
 vim.g.clipboard = {
-    name = 'osc52',
-    copy = {['+'] = copy, ['*'] = copy},
-    paste = {['+'] = '', ['*'] = ''},
+  name = 'osc52',
+  copy = { ['+'] = copy, ['*'] = copy },
+  paste = { ['+'] = '', ['*'] = '' },
 }
 
 vim.api.nvim_create_autocmd('TextYankPost', {
-    group = vim.api.nvim_create_augroup('Yank', {clear = true}),
-    pattern = '*',
-    callback = function()
-        if (vim.v.event.operator == 'y' or vim.v.event.operator == 'd' or vim.v.event.operator == 'c') and vim.v.event.regname == '' then
-            require('osc52').copy_register ''
-        end
-    end,
+  group = vim.api.nvim_create_augroup('Yank', { clear = true }),
+  pattern = '*',
+  callback = function()
+    if
+      (vim.v.event.operator == 'y' or vim.v.event.operator == 'd' or vim.v.event.operator == 'c')
+      and vim.v.event.regname == ''
+    then
+      require('osc52').copy_register('')
+    end
+  end,
 })
 -- }}}

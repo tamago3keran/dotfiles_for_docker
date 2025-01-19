@@ -26,5 +26,10 @@ vim.fn['ddu#custom#patch_local']('message', {
   },
 })
 
-vim.api.nvim_set_keymap("n", "[ddu]m", "<Cmd>call ddu#start({'name': 'message', 'sources': [{'name': 'message'}]})<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  'n',
+  '[ddu]m',
+  "<Cmd>call ddu#start({'name': 'message', 'sources': [{'name': 'message'}]})<CR>",
+  { noremap = true, silent = true }
+)
 -- }}}

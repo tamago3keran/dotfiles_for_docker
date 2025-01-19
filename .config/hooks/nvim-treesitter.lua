@@ -1,9 +1,9 @@
 -- lua_source {{{
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { "ruby" },
+  ensure_installed = { 'ruby' },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
-  }
+  },
 })
 -- }}}
