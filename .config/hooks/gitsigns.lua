@@ -1,5 +1,5 @@
 -- lua_source {{{
-require('gitsigns').setup {
+require('gitsigns').setup({
   signcolumn = false,
   numhl = true,
   linehl = true,
@@ -14,21 +14,31 @@ require('gitsigns').setup {
 
     -- Navigation
     map('n', '<C-g>n', function()
-      if vim.wo.diff then return '<C-g>n' end
-      vim.schedule(function() gs.next_hunk() end)
+      if vim.wo.diff then
+        return '<C-g>n'
+      end
+      vim.schedule(function()
+        gs.next_hunk()
+      end)
       return '<Ignore>'
-    end, {expr=true})
+    end, { expr = true })
 
     map('n', '<C-g>p', function()
-      if vim.wo.diff then return '<C-g>p' end
-      vim.schedule(function() gs.prev_hunk() end)
+      if vim.wo.diff then
+        return '<C-g>p'
+      end
+      vim.schedule(function()
+        gs.prev_hunk()
+      end)
       return '<Ignore>'
-    end, {expr=true})
+    end, { expr = true })
 
     -- Actions
     map('n', '<C-g>u', gs.reset_hunk)
-    map('n', '<C-g>b', function() gs.blame_line{full=true} end)
+    map('n', '<C-g>b', function()
+      gs.blame_line({ full = true })
+    end)
     map('n', '<C-g>d', gs.preview_hunk)
-  end
-}
+  end,
+})
 -- }}}
