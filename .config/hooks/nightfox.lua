@@ -12,7 +12,7 @@ local mode_utils = require('lualine.utils.mode')
 ---@return string
 local hex = function(n)
   if n then
-    return fmt("#%06x", n)
+    return fmt('#%06x', n)
   end
 end
 
@@ -20,12 +20,12 @@ end
 ---@param style string
 ---@return tlle
 local function parse_style(style)
-  if not style or style == "NONE" then
+  if not style or style == 'NONE' then
     return {}
   end
 
   local result = {}
-  for token in string.gmatch(style, "([^,]+)") do
+  for token in string.gmatch(style, '([^,]+)') do
     result[token] = true
   end
 
@@ -75,15 +75,15 @@ local function generate_pallet_from_colorscheme()
   }
 
   local diagnostic_map = {
-    hint = { hl = "DiagnosticHint", default = color_map.green.default },
-    info = { hl = "DiagnosticInfo", default = color_map.blue.default },
-    warn = { hl = "DiagnosticWarn", default = color_map.yellow.default },
-    error = { hl = "DiagnosticError", default = color_map.red.default },
+    hint = { hl = 'DiagnosticHint', default = color_map.green.default },
+    info = { hl = 'DiagnosticInfo', default = color_map.blue.default },
+    warn = { hl = 'DiagnosticWarn', default = color_map.yellow.default },
+    error = { hl = 'DiagnosticError', default = color_map.red.default },
   }
 
   local pallet = {}
   for name, value in pairs(color_map) do
-    local global_name = "terminal_color_" .. value.index
+    local global_name = 'terminal_color_' .. value.index
     pallet[name] = vim.g[global_name] and vim.g[global_name] or value.default
   end
 
@@ -91,10 +91,10 @@ local function generate_pallet_from_colorscheme()
     pallet[name] = get_highlight(value.hl).fg or value.default
   end
 
-  pallet.sl = get_highlight("StatusLine")
-  pallet.tls = get_highlight("TabLineSel")
-  pallet.tl = get_highlight("TabLine")
-  pallet.tlf = get_highlight("TabLineFill")
+  pallet.sl = get_highlight('StatusLine')
+  pallet.tls = get_highlight('TabLineSel')
+  pallet.tl = get_highlight('TabLine')
+  pallet.tlf = get_highlight('TabLineFill')
 
   return pallet
 end
@@ -120,15 +120,15 @@ _G._generate_user_statusline_highlights = function()
 
   local colors = {}
   for name, value in pairs(sl_colors) do
-    colors["User" .. name] = { fg = value.fg, bg = value.bg, bold = true }
-    colors["UserRv" .. name] = { fg = value.bg, bg = value.fg, bold = true }
+    colors['User' .. name] = { fg = value.fg, bg = value.bg, bold = true }
+    colors['UserRv' .. name] = { fg = value.bg, bg = value.fg, bold = true }
   end
 
-  local status = vim.o.background == "dark" and { fg = pal.black, bg = pal.white } or { fg = pal.white, bg = pal.black }
+  local status = vim.o.background == 'dark' and { fg = pal.black, bg = pal.white } or { fg = pal.white, bg = pal.black }
 
   local groups = {
     -- commonline
-    UserCLFill = { fg = "NONE", bg = "NONE" },
+    UserCLFill = { fg = 'NONE', bg = 'NONE' },
 
     -- statusline
     UserSLHint = { fg = pal.sl.bg, bg = pal.hint, bold = true },
@@ -157,13 +157,13 @@ _G._generate_user_statusline_highlights = function()
     UserTLLineSep = { fg = pal.tl.bg, bg = pal.tlf.bg },
   }
 
-  set_highlights(vim.tbl_extend("force", colors, groups))
+  set_highlights(vim.tbl_extend('force', colors, groups))
 end
 
 _generate_user_statusline_highlights()
 
-vim.api.nvim_create_augroup("UserStatuslineHighlightGroups", { clear = true })
-vim.api.nvim_create_autocmd({ "SessionLoadPost", "ColorScheme" }, {
+vim.api.nvim_create_augroup('UserStatuslineHighlightGroups', { clear = true })
+vim.api.nvim_create_autocmd({ 'SessionLoadPost', 'ColorScheme' }, {
   callback = function()
     _generate_user_statusline_highlights()
   end,
@@ -172,8 +172,8 @@ vim.api.nvim_create_autocmd({ "SessionLoadPost", "ColorScheme" }, {
 require('nightfox').setup({
   options = {
     transparent = true,
-  }
+  },
 })
 
-vim.cmd("colorscheme nightfox")
+vim.cmd('colorscheme nightfox')
 -- }}}
