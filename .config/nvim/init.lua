@@ -77,5 +77,12 @@ vim.api.nvim_create_autocmd("User", {
   end,
 })
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.lua",
+  callback = function()
+    vim.cmd("!stylua --config-path " .. vim.env.TOMLS_DIR .. "/formatter/stylua.toml %")
+  end,
+})
+
 vim.cmd("filetype indent plugin on")
 vim.cmd("syntax on")
