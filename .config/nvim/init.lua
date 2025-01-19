@@ -77,10 +77,14 @@ vim.api.nvim_create_autocmd("User", {
   end,
 })
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.lua",
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*.lua',
   callback = function()
-    vim.cmd("!stylua --config-path " .. vim.env.TOMLS_DIR .. "/formatter/stylua.toml %")
+    local stylua_config = vim.env.TOMLS_DIR .. '/formatter/stylua.toml'
+    vim.system({ 'stylua', '--config-path', stylua_config, vim.fn.expand('%') })
+    vim.defer_fn(function()
+      vim.cmd('edit')
+    end, 1000)
   end,
 })
 
