@@ -15,7 +15,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     group = vim.api.nvim_create_augroup('Yank', {clear = true}),
     pattern = '*',
     callback = function()
-        if vim.v.event.operator == 'y' and vim.v.event.regname == '' then
+        if (vim.v.event.operator == 'y' or vim.v.event.operator == 'd' or vim.v.event.operator == 'c') and vim.v.event.regname == '' then
             require('osc52').copy_register ''
         end
     end,
