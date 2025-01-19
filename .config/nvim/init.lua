@@ -8,10 +8,10 @@ vim.opt.expandtab = true
 vim.opt.splitright = true
 vim.opt.winblend = 15
 
-vim.env.CONFIG_DIR = "~/.config"
-vim.env.HOOKS_DIR = "~/.config/hooks"
-vim.env.TOMLS_DIR = "~/.config/tomls"
-vim.env.CACHE_DIR = "~/.cache"
+vim.env.CONFIG_DIR = os.getenv("HOME") .. "/.config"
+vim.env.HOOKS_DIR = os.getenv("HOME") .. "/.config/hooks"
+vim.env.TOMLS_DIR = os.getenv("HOME") .. "/.config/tomls"
+vim.env.CACHE_DIR = os.getenv("HOME") .. "/.cache"
 
 vim.g.floating_window_with_preview_config = {
   margin_left = math.floor(vim.o.columns * 0.1),
