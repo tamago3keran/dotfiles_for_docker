@@ -23,5 +23,17 @@ vim.fn['ddu#custom#patch_local']('filer', {
   },
 })
 
-vim.api.nvim_set_keymap("n", "[ddu]f", "<Cmd>call ddu#start({'name': 'filer', 'sources': [{'name': 'file'}]})<CR>", { noremap = true, silent = true })
+local function open_filer()
+  local path = vim.t.ddu_ui_filer_path or vim.fn.getcwd()
+
+  vim.fn['ddu#start']({
+    name = "filer",
+    sources = { {
+      name = "file",
+      options = { path = path }
+    } }
+  })
+end
+vim.api.nvim_create_user_command("OpenFiler", open_filer, {})
+vim.api.nvim_set_keymap("n", "[ddu]f", "<Cmd>OpenFiler<CR>", { noremap = true, silent = true })
 -- }}}

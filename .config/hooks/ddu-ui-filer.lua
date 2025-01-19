@@ -1,4 +1,17 @@
 -- lua_add {{{
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    if vim.bo.filetype == 'ddu-ff' or vim.bo.filetype == nil then
+      return
+    end
+
+    local path = vim.fn.expand("%:p:h")
+    if path ~= "" and path:find("ddu%-ff:") == nil then
+      vim.t.ddu_ui_filer_path = path
+    end
+  end
+})
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "ddu-filer",
   callback = function()
