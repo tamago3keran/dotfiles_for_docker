@@ -9,6 +9,7 @@ vim.fn['ddu#custom#patch_local']('filer', {
       sorters = { 'sorter_alpha' },
       matchers = { 'matcher_ignore_files' },
       columns = { 'devicon_filename' },
+      limitPath = vim.fn.getcwd(),
     },
   },
   filterParams = {
