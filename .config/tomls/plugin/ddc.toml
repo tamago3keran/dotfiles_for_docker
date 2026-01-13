@@ -1,6 +1,6 @@
 [[plugins]]
 repo = 'Shougo/ddc.vim'
-rev = 'v9.1.0'
+rev = 'v10.1.0'
 on_event = ['InsertEnter', 'CmdlineEnter']
 hooks_file = '$HOOKS_DIR/ddc.lua'
 
