@@ -37,7 +37,7 @@ hooks_file = '$HOOKS_DIR/gitsigns.lua'
 
 [[plugins]]
 repo = 'github/copilot.vim'
-rev = 'v1.41.0'
+rev = 'v1.59.0'
 hooks_file = '$HOOKS_DIR/copilot.lua'
 on_source = 'ddc.vim'
 
