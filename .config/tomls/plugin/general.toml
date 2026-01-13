@@ -9,7 +9,7 @@ hooks_file = '$HOOKS_DIR/startify.lua'
 
 [[plugins]]
 repo = 'nanozuki/tabby.nvim'
-rev = 'v2.7.4'
+rev = 'v2.8.1'
 hooks_file = '$HOOKS_DIR/tabby.lua'
 
 [[plugins]]
