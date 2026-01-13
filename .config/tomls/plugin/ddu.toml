@@ -6,7 +6,7 @@ hooks_file = '$HOOKS_DIR/ddu.lua'
 
 [[plugins]]
 repo = 'Shougo/ddu-ui-ff'
-rev = 'v1.6.0'
+rev = 'v3.1.0'
 on_source = 'ddu.vim'
 hooks_file = '$HOOKS_DIR/ddu-ui-ff.lua'
 
