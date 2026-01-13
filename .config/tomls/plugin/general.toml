@@ -14,7 +14,7 @@ hooks_file = '$HOOKS_DIR/tabby.lua'
 
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
-rev = 'v1.2.0'
+rev = 'v2.5.0'
 hooks_file = '$HOOKS_DIR/lspconfig.lua'
 
 [[plugins]]
