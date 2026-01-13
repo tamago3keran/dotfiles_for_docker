@@ -10,7 +10,7 @@ hooks_file = '$HOOKS_DIR/deol.lua'
 
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
-rev = 'v0.9.3'
+rev = 'v0.10.0'
 on_event = 'BufRead'
 hooks_file = '$HOOKS_DIR/nvim-treesitter.lua'
 
