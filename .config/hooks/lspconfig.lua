@@ -39,9 +39,14 @@ end
 -- When you snippet to enable the language server,
 -- write the settings of specified language.
 -- ref. https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
---
--- e.g.)
--- require'lspconfig'.vimls.setup{
---   on_attach = on_attach,
--- }
+local lspconfig = require('lspconfig')
+lspconfig.pyright.setup({ on_attach = on_attach })
+lspconfig.ts_ls.setup({ on_attach = on_attach })
+lspconfig.eslint.setup({ on_attach = on_attach })
+lspconfig.solargraph.setup({ on_attach = on_attach })
+lspconfig.vimls.setup({ on_attach = on_attach })
+lspconfig.lua_ls.setup({
+  on_attach = on_attach,
+  settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
+})
 -- }}}
