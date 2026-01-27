@@ -35,23 +35,6 @@ vim.fn['ddu#custom#patch_local']('file_rec', {
       matchers = { 'matcher_substring', 'matcher_ignore_files' },
     },
   },
-  sourceParams = {
-    file_rec = {
-      ignoredDirectories = {
-        '.git',
-        'node_modules',
-        'dist',
-        'build',
-        '.bundle',
-        'storage',
-        'tmp',
-        'log',
-        '__pycache__',
-        '.venv',
-        '.pytest_cache',
-      },
-    },
-  },
   filterParams = {
     matcher_substring = {
       highlightMatched = 'Title',
@@ -62,6 +45,14 @@ vim.fn['ddu#custom#patch_local']('file_rec', {
         'node_modules/',
         '.git/',
         'tmp/',
+        'dist/',
+        'build/',
+        '.bundle/',
+        'storage/',
+        'log/',
+        '__pycache__/',
+        '.venv/',
+        '.pytest_cache/',
       },
     },
   },
