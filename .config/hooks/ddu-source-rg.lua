@@ -36,7 +36,22 @@ vim.fn['ddu#custom#patch_local']('grep', {
   },
   sourceParams = {
     rg = {
-      args = { '--hidden', '--column' },
+      args = {
+        '--hidden',
+        '--column',
+        '--glob=!node_modules',
+        '--glob=!dist',
+        '--glob=!build',
+        '--glob=!vendor/bundle',
+        '--glob=!.bundle',
+        '--glob=!storage',
+        '--glob=!tmp',
+        '--glob=!log',
+        '--glob=!__pycache__',
+        '--glob=!.venv',
+        '--glob=!.pytest_cache',
+        '--glob=!.git',
+      },
     },
   },
   filterParams = {

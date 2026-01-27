@@ -14,7 +14,20 @@ vim.fn['ddu#custom#patch_local']('filer', {
   },
   filterParams = {
     matcher_ignore_files = {
-      ignoreGlobs = { '.git' },
+      ignoreGlobs = {
+        '.git',
+        'node_modules',
+        'dist',
+        'build',
+        'vendor/bundle',
+        '.bundle',
+        'storage',
+        'tmp',
+        'log',
+        '__pycache__',
+        '.venv',
+        '.pytest_cache',
+      },
     },
   },
   columnParams = {
