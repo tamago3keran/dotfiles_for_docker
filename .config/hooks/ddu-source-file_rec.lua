@@ -42,7 +42,6 @@ vim.fn['ddu#custom#patch_local']('file_rec', {
         'node_modules',
         'dist',
         'build',
-        'vendor/bundle',
         '.bundle',
         'storage',
         'tmp',
