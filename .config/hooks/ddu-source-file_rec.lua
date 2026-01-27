@@ -32,7 +32,7 @@ vim.fn['ddu#custom#patch_local']('file_rec', {
   sourceOptions = {
     file_rec = {
       sorters = { 'sorter_alpha' },
-      matchers = { 'matcher_substring' },
+      matchers = { 'matcher_substring', 'matcher_ignore_files' },
     },
   },
   sourceParams = {
@@ -56,6 +56,14 @@ vim.fn['ddu#custom#patch_local']('file_rec', {
   filterParams = {
     matcher_substring = {
       highlightMatched = 'Title',
+    },
+    matcher_ignore_files = {
+      ignorePatterns = {
+        'vendor/bundle/',
+        'node_modules/',
+        '.git/',
+        'tmp/',
+      },
     },
   },
   kindOptions = {
