@@ -42,7 +42,7 @@ vim.fn['ddu#custom#patch_local']('grep', {
         '--glob=!node_modules',
         '--glob=!dist',
         '--glob=!build',
-        '--glob=!vendor/bundle',
+        '--glob=!vendor/*',
         '--glob=!.bundle',
         '--glob=!storage',
         '--glob=!tmp',
