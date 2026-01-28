@@ -19,7 +19,7 @@ vim.fn['ddu#custom#patch_local']('filer', {
         'node_modules',
         'dist',
         'build',
-        'vendor/bundle',
+        'vendor',
         '.bundle',
         'storage',
         'tmp',
