@@ -88,5 +88,12 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   end,
 })
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
+})
+
 vim.cmd('filetype indent plugin on')
 vim.cmd('syntax on')
