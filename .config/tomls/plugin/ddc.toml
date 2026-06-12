@@ -27,10 +27,6 @@ repo = 'Shougo/ddc-source-copilot'
 on_source = 'ddc.vim'
 
 [[plugins]]
-repo = 'Shougo/ddc-source-nvim-lsp'
-on_source = 'ddc.vim'
-
-[[plugins]]
 repo = 'Shougo/ddc-matcher_head'
 on_source = 'ddc.vim'
 
