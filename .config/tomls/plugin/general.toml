@@ -13,11 +13,6 @@ rev = 'v2.8.1'
 hooks_file = '$HOOKS_DIR/tabby.lua'
 
 [[plugins]]
-repo = 'neovim/nvim-lspconfig'
-rev = 'v2.5.0'
-hooks_file = '$HOOKS_DIR/lspconfig.lua'
-
-[[plugins]]
 repo = 'nvim-lualine/lualine.nvim'
 depends = 'nvim-web-devicons'
 hooks_file = '$HOOKS_DIR/lualine.lua'
