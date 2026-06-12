@@ -89,9 +89,17 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = '*',
-  callback = function()
-    pcall(vim.treesitter.start)
+  pattern = {
+    'markdown', 'python', 'javascript',
+    'typescript', 'typescriptreact', 'ruby'
+  },
+  callback = function(args)
+    local bufnr = args.buf
+    local fp = vim.api.nvim_buf_get_name(bufnr)
+    if vim.fn.getfsize(fp) > 1024 * 1024 then
+      return
+    end
+    pcall(vim.treesitter.start, bufnr)
   end,
 })
 
