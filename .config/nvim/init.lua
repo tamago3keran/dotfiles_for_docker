@@ -88,5 +88,20 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   end,
 })
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = {
+    'markdown', 'python', 'javascript',
+    'typescript', 'typescriptreact', 'ruby'
+  },
+  callback = function(args)
+    local bufnr = args.buf
+    local fp = vim.api.nvim_buf_get_name(bufnr)
+    if vim.fn.getfsize(fp) > 1024 * 1024 then
+      return
+    end
+    pcall(vim.treesitter.start, bufnr)
+  end,
+})
+
 vim.cmd('filetype indent plugin on')
 vim.cmd('syntax on')
