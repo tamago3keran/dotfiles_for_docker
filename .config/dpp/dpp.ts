@@ -60,7 +60,6 @@ export class Config extends BaseConfig {
       const tomlPromises = [
         { path: "$TOMLS_DIR/plugin/general.toml", lazy: false },
         { path: "$TOMLS_DIR/plugin/ddu.toml", lazy: true },
-        { path: "$TOMLS_DIR/plugin/ddc.toml", lazy: true },
         { path: "$TOMLS_DIR/plugin/lazy.toml", lazy: true }
       ].map((tomlFile) =>
         action.callback({
