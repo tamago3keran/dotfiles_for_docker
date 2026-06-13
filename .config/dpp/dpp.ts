@@ -133,14 +133,9 @@ export class Config extends BaseConfig {
       checkFiles.push(file.path);
     }
 
-    const finalPlugins: Plugin[] = [];
-    if (lazyResult && lazyResult.plugins) {
-      if (Array.isArray(lazyResult.plugins)) {
-        finalPlugins.push(...lazyResult.plugins);
-      } else if (typeof lazyResult.plugins === "object") {
-        finalPlugins.push(...Object.values(lazyResult.plugins as Record<string, Plugin>));
-      }
-    }
+    const finalPlugins: Plugin[] = Array.isArray(lazyResult?.plugins)
+      ? lazyResult.plugins
+      : Object.values(lazyResult?.plugins ?? {});
 
     return {
       checkFiles,
