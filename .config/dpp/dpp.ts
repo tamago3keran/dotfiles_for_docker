@@ -34,6 +34,11 @@ export class Config extends BaseConfig {
   }): Promise<ConfigReturn> {
     args.contextBuilder.setGlobal({
       protocols: ["git"],
+      protocolParams: {
+        git: {
+          cloneDepth: 0,
+        },
+      },
     });
 
     const [context, options] = await args.contextBuilder.get(args.denops);
