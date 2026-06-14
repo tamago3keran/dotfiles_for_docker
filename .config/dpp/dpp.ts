@@ -2,14 +2,14 @@ import {
   type ContextBuilder,
   type ExtOptions,
   type Plugin,
-} from "jsr:@shougo/dpp-vim@4.1.0/types";
+} from "jsr:@shougo/dpp-vim@~4.1.0/types";
 import {
   BaseConfig,
   type ConfigReturn,
   type MultipleHook,
-} from "jsr:@shougo/dpp-vim@4.1.0/config";
-import { Protocol } from "jsr:@shougo/dpp-vim@4.1.0/protocol";
-import { mergeFtplugins } from "jsr:@shougo/dpp-vim@4.1.0/utils";
+} from "jsr:@shougo/dpp-vim@~4.1.0/config";
+import { Protocol } from "jsr:@shougo/dpp-vim@~4.1.0/protocol";
+import { mergeFtplugins } from "jsr:@shougo/dpp-vim@~4.1.0/utils";
 
 import type {
   Ext as TomlExt,
@@ -60,6 +60,7 @@ export class Config extends BaseConfig {
       const tomlPromises = [
         { path: "$TOMLS_DIR/plugin/general.toml", lazy: false },
         { path: "$TOMLS_DIR/plugin/ddu.toml", lazy: true },
+        { path: "$TOMLS_DIR/plugin/ddc.toml", lazy: true },
         { path: "$TOMLS_DIR/plugin/lazy.toml", lazy: true }
       ].map((tomlFile) =>
         action.callback({
@@ -80,14 +81,10 @@ export class Config extends BaseConfig {
 
       const tomls = await Promise.all(tomlPromises);
 
+      // Merge toml results
       for (const toml of tomls) {
-        if (!toml) continue;
-
-        const tomlPlugins = toml.plugins ?? [];
-        for (const plugin of tomlPlugins) {
-          if (plugin && plugin.name) {
-            recordPlugins[plugin.name] = plugin;
-          }
+        for (const plugin of toml.plugins ?? []) {
+          recordPlugins[plugin.name] = plugin;
         }
 
         if (toml.ftplugins) {
@@ -133,16 +130,12 @@ export class Config extends BaseConfig {
       checkFiles.push(file.path);
     }
 
-    const finalPlugins: Plugin[] = Array.isArray(lazyResult?.plugins)
-      ? lazyResult.plugins
-      : Object.values(lazyResult?.plugins ?? {});
-
     return {
       checkFiles,
       ftplugins,
       hooksFiles,
       multipleHooks,
-      plugins: finalPlugins,
+      plugins: lazyResult?.plugins ?? [],
       stateLines: lazyResult?.stateLines ?? [],
     };
   }
