@@ -14,7 +14,7 @@ import { mergeFtplugins } from "jsr:@shougo/dpp-vim@~5.3.0/utils";
 import type {
   Ext as TomlExt,
   Params as TomlParams,
-} from "jsr:@shougo/dpp-ext-toml@~1.3.0";
+} from "jsr:@shougo/dpp-ext-toml@~2.0.1";
 import type {
   Ext as LazyExt,
   LazyMakeStateResult,
