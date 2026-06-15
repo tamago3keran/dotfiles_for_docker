@@ -71,8 +71,10 @@ else
 
   vim.api.nvim_create_autocmd('VimEnter', {
     callback = function()
-      vim.fn['denops#plugin#wait_async']('ddu', function()
-      end)
+      if vim.fn.exists('*denops#plugin#wait_async') == 1 then
+        vim.fn['denops#plugin#wait_async']('ddu', function()
+        end)
+      end
     end,
   })
 end
