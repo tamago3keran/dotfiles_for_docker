@@ -68,6 +68,13 @@ else
       end
     end,
   })
+
+  vim.api.nvim_create_autocmd('VimEnter', {
+    callback = function()
+      vim.fn['denops#plugin#wait_async']('ddu', function()
+      end)
+    end,
+  })
 end
 
 vim.api.nvim_create_autocmd('User', {
