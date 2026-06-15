@@ -44,6 +44,9 @@ vim.opt.runtimepath:prepend(denopsSrc)
 
 local dpp = require('dpp')
 
+vim.g['dpp#_plugins'] = vim.g['dpp#_plugins'] or {}
+vim.g.dpp = vim.g.dpp or { state = { plugins = {} } }
+
 if dpp.load_state(dppBase) then
   vim.api.nvim_create_autocmd('User', {
     pattern = 'DenopsReady',
